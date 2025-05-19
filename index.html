@@ -10,7 +10,7 @@
   <header>
     <h1>Firdaus</h1>
     <div style="text-align: center; margin-top: 10px;">
-      <img src="https://i.postimg.cc/pVhKpFtR/Firdaus98.jpg" alt="Foto Firdaus" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+      <img src="https://i.imgur.com/Kdo11lz.jpeg" alt="Foto Firdaus" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
     </div>
     <p>Web Developer | Belajar JavaScript</p>
   </header>
@@ -27,7 +27,9 @@
   </section>
 
   <audio id="background-music" src="fourtwnty-mangu.mp3" autoplay loop muted></audio>
-  <p class="music-info">Klik ♫ untuk play musik</p>
+
+  <p class="music-info animate-text">Klik ♫ untuk play musik</p>
+
   <button id="toggle-music" onclick="toggleMusic()">♫</button>
 
   <footer>
@@ -35,5 +37,35 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    function showContact() {
+      const info = document.getElementById("contact-info");
+      if (info.style.display === "none" || info.style.display === "") {
+        info.style.display = "block";
+        info.style.opacity = 0;
+        setTimeout(() => {
+          info.style.transition = "opacity 0.5s ease-in";
+          info.style.opacity = 1;
+        }, 10);
+      } else {
+        info.style.opacity = 0;
+        setTimeout(() => {
+          info.style.display = "none";
+        }, 500);
+      }
+    }
+
+    function toggleMusic() {
+      const music = document.getElementById("background-music");
+      if (music.muted) {
+        music.muted = false;
+        music.play();
+      } else if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+  </script>
 </body>
 </html>
