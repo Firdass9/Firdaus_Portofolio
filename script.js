@@ -6,3 +6,7 @@ function showContact() {
     info.style.display = "none";
   }
 }
+function showContact() {
+  const contactInfo = document.getElementById('contact-info');
+  contactInfo.style.display = 'block';
+}
