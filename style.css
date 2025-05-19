@@ -47,6 +47,14 @@ button {
   cursor: pointer;
 }
 
+@media (max-width: 480px) {
+  #toggle-music {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
 footer {
   text-align: center;
   padding: 10px;
