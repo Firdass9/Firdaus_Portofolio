@@ -10,11 +10,11 @@ function showContact() {
   const contactInfo = document.getElementById('contact-info');
   contactInfo.style.display = 'block';
 }
-function togglePlayer() {
-  const player = document.getElementById("soundcloud-player");
-  if (player.style.display === "none" || player.style.display === "") {
-    player.style.display = "block";
+function toggleMusic() {
+  const music = document.getElementById("background-music");
+  if (music.paused) {
+    music.play();
   } else {
-    player.style.display = "none";
+    music.pause();
   }
 }
