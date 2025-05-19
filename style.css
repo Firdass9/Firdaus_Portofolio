@@ -53,6 +53,13 @@ footer {
   color: white;
 }
 
+.music-info {
+  text-align: center;
+  font-style: italic;
+  color: #444;
+  animation: fadeIn 2s ease-in;
+}
+
 /* Animasi fade-in untuk seluruh halaman */
 body {
   animation: fadeIn 1.5s ease-in;
