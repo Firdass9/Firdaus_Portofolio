@@ -13,6 +13,10 @@ header {
   text-align: center;
 }
 
+header, .about, .contact {
+  text-align: center;
+}
+
 section {
   padding: 20px;
   margin: 10px;
