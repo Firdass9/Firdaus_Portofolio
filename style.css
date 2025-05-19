@@ -145,6 +145,22 @@ section {
   text-align: center;
 }
 
+/* Overlay saat sidebar aktif */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1001;
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+}
+
 /* Tombol Umum */
 button {
   padding: 10px 15px;
