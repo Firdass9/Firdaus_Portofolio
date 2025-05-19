@@ -1,18 +1,18 @@
 function showContact() {
   const info = document.getElementById("contact-info");
-  if (info.style.display === "none") {
+  if (info.style.display === "none" || info.style.display === "") {
     info.style.display = "block";
   } else {
     info.style.display = "none";
   }
 }
-function showContact() {
-  const contactInfo = document.getElementById('contact-info');
-  contactInfo.style.display = 'block';
-}
+
 function toggleMusic() {
   const music = document.getElementById("background-music");
-  if (music.paused) {
+  if (music.muted) {
+    music.muted = false;
+    music.play();
+  } else if (music.paused) {
     music.play();
   } else {
     music.pause();
