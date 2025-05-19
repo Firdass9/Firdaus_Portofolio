@@ -147,6 +147,16 @@ header {
   border-radius: 5px;
 }
 
+
+/* Text pargraf tentang.html */
+.about-paragraph {
+  background-color: #e0e0e0;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
 .hint-text {
   position: fixed;
   top: 65px;
