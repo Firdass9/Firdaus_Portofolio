@@ -26,3 +26,17 @@ function toggleMusic() {
     music.pause();
   }
 }
+
+// Slide-in animation saat scroll atau load
+function revealSections() {
+  const sections = document.querySelectorAll(".slide");
+  sections.forEach((section) => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      section.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealSections);
+window.addEventListener("DOMContentLoaded", revealSections);
