@@ -1,3 +1,23 @@
+/* Untuk layar desktop (min-width: 769px), sidebar tetap disembunyikan */
+@media (min-width: 769px) {
+  .sidebar {
+    left: -250px !important; /* pastikan tetap tersembunyi */
+  }
+
+  .sidebar.show {
+    left: 0 !important; /* jika kamu ingin tetap bisa pakai di desktop */
+  }
+
+  .content-wrapper.sidebar-shift {
+    margin-left: 0 !important; /* jangan geser konten di desktop */
+  }
+
+  #overlay {
+    display: none !important; /* overlay tidak perlu di desktop */
+  }
+}
+
+
 /* Video background */
 #bg-video {
   position: fixed;
