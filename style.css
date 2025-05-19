@@ -47,6 +47,24 @@ header {
   }
 }
 
+.content-wrapper {
+  transition: transform 0.3s ease;
+}
+
+.sidebar-open .content-wrapper {
+  transform: translateX(200px); /* Geser kanan saat sidebar terbuka */
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .sidebar-open .content-wrapper {
+    transform: translateX(180px);
+  }
+}
+
 /* Section */
 section {
   padding: 20px;
