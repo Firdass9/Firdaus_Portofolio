@@ -26,8 +26,7 @@
     <p id="contact-info" style="display: none;">Email: firdaus@example.com</p>
   </section>
 
-<audio id="background-music" src="fourtwnty-mangu.mp3" autoplay loop></audio>
-<button id="toggle-music" onclick="toggleMusic()">♫</button>
+<audio id="background-music" src="fourtwnty-mangu.mp3" autoplay loop muted></audio>
 
   <footer>
     <p>© 2025 Firdaus. All rights reserved.</p>
@@ -37,6 +36,22 @@
 <script>
 function showContact() {
   document.getElementById('contact-info').style.display = 'block';
+}
+</script>
+<button id="toggle-music" onclick="toggleMusic()">♫</button>
+
+<script>
+const music = document.getElementById('background-music');
+
+function toggleMusic() {
+  if (music.muted) {
+    music.muted = false;
+    music.play();
+  } else if (music.paused) {
+    music.play();
+  } else {
+    music.pause();
+  }
 }
 </script>
 </body>
