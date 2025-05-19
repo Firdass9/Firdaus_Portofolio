@@ -10,3 +10,11 @@ function showContact() {
   const contactInfo = document.getElementById('contact-info');
   contactInfo.style.display = 'block';
 }
+function togglePlayer() {
+  const player = document.getElementById("soundcloud-player");
+  if (player.style.display === "none" || player.style.display === "") {
+    player.style.display = "block";
+  } else {
+    player.style.display = "none";
+  }
+}
