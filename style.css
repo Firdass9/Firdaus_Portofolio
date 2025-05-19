@@ -29,6 +29,10 @@
   z-index: -2;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 /* Reset dan struktur dasar */
 body, html {
   margin: 0;
