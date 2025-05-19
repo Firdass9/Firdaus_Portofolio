@@ -30,13 +30,6 @@ function showContact() {
 function toggleNav() {
   const sidebar = document.getElementById("sidebar");
   const contentWrapper = document.querySelector(".content-wrapper");
-  sidebar.classList.toggle("show");
-  contentWrapper.classList.toggle("sidebar-shift");
-}
-
-function toggleNav() {
-  const sidebar = document.getElementById("sidebar");
-  const contentWrapper = document.querySelector(".content-wrapper");
   const overlay = document.getElementById("overlay");
 
   sidebar.classList.toggle("show");
