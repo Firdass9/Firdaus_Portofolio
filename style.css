@@ -147,6 +147,23 @@ header {
   border-radius: 5px;
 }
 
+.hint-text {
+  position: fixed;
+  top: 65px;
+  left: 25px;
+  font-size: 14px;
+  color: yellow;
+  font-weight: bold;
+  animation: blinkHint 1s infinite;
+  z-index: 1004;
+  text-shadow: 1px 1px 2px black;
+}
+
+@keyframes blinkHint {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
 .sidebar {
   position: fixed;
   left: -250px;
