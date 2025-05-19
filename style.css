@@ -3,7 +3,12 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #0077cc; /* Biru */
+  background-image: url('https://i.pinimg.com/originals/7a/5b/8e/7a5b8e3a8a6c3b9a7f6a3b6f3b6a3b6f.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
   color: white;
   display: flex;
   flex-direction: column;
