@@ -11,6 +11,7 @@ body {
 
 main {
   flex: 1;
+  padding: 20px;
 }
 
 header {
@@ -60,7 +61,7 @@ button {
 
 footer {
   text-align: center;
-  padding: 10px;
+  padding: 15px;
   background-color: #222;
   color: white;
 }
