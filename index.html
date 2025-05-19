@@ -1,4 +1,5 @@
-<!-- index.html --><!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,43 +7,49 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<video autoplay muted loop playsinline id="bg-video">
+
+  <!-- Background video -->
+  <video autoplay muted loop playsinline id="bg-video">
     <source src="Firdaus1998.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
 
+  <!-- Tombol hamburger -->
   <div class="hamburger" onclick="toggleNav()">☰</div>
+
+  <!-- Sidebar navigasi -->
   <nav class="sidebar" id="sidebar">
     <ul>
       <li><a href="index.html">Beranda</a></li>
       <li><a href="tentang.html">Tentang</a></li>
       <li><a href="kontak.html">Kontak</a></li>
     </ul>
-  </nav>  <section id="home" class="slide">
+  </nav>
 
-<div class="content-wrapper">
-  <section id="home" class="slide">
-<header>
-      <h1>Mohamad Firdaus</h1>
+  <!-- Konten utama -->
+  <main class="content-wrapper">
+    <section class="content">
+      <header>
+        <h1>Mohamad Firdaus</h1>
+        <div style="text-align: center; margin-top: 10px;">
+          <img src="https://i.imgur.com/Kdo11lz.jpeg" alt="Foto Firdaus" class="profile-img zoom-in">
+        </div>
+        <p>Web Developer | Belajar JavaScript</p>
+      </header>
 
-     <div style="text-align: center; margin-top: 10px;">
-  <img src="https://i.imgur.com/Kdo11lz.jpeg" alt="Foto Firdaus" class="profile-img zoom-in">
-</div>
+      <p class="music-info">Klik ♫ untuk play musik</p>
+      <button id="toggle-music" onclick="toggleMusic()">♫</button>
+    </section>
 
+    <footer>
+      © 2025 Firdaus. All rights reserved
+    </footer>
+  </main>
 
-      <p>Web Developer | Belajar JavaScript</p>
-    </header>
+  <!-- Musik -->
+  <audio id="background-music" src="fourtwnty-mangu.mp3" autoplay loop muted></audio>
 
-
-  </section><audio id="background-music" src="fourtwnty-mangu.mp3" autoplay loop muted></audio>
-
-  <p class="music-info">Klik ♫ untuk play musik</p>
-  <button id="toggle-music" onclick="toggleMusic()">♫</button> 
-</div>
- <footer>
-    © 2025 Firdaus. All rights reserved
-  </footer>  
-
-<script src="script.js"></script>
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 </html>
