@@ -164,6 +164,24 @@ header {
   50% { opacity: 0.3; }
 }
 
+.arrow-up {
+  position: fixed;
+  top: 55px;
+  left: 35px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 10px solid yellow;
+  animation: bounce 1s infinite;
+  z-index: 1004;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
 .sidebar {
   position: fixed;
   left: -250px;
