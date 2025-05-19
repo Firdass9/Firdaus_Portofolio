@@ -2,8 +2,16 @@ function showContact() {
   const info = document.getElementById("contact-info");
   if (info.style.display === "none" || info.style.display === "") {
     info.style.display = "block";
+    info.style.opacity = 0;
+    setTimeout(() => {
+      info.style.transition = "opacity 0.5s ease-in";
+      info.style.opacity = 1;
+    }, 10);
   } else {
-    info.style.display = "none";
+    info.style.opacity = 0;
+    setTimeout(() => {
+      info.style.display = "none";
+    }, 500);
   }
 }
 
