@@ -1,9 +1,10 @@
+/* Reset dan struktur dasar */
 body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #0077cc; /* Biru */
+  color: white;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -14,41 +15,47 @@ main {
   padding: 20px;
 }
 
+/* Header */
 header {
-  background-color: #0077cc;
+  background-color: #005fa3;
   color: white;
   padding: 20px;
   text-align: center;
 }
 
+/* Gambar Profil */
 .profile-img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
+  border: 4px solid white;
 }
 
+/* Section */
 section {
   padding: 20px;
   margin: 10px;
   text-align: center;
 }
 
+/* Tombol Umum */
 button {
   padding: 10px 15px;
-  background-color: #0077cc;
-  color: white;
+  background-color: white;
+  color: #0077cc;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
+/* Tombol Musik */
 #toggle-music {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 9999;
-  background-color: #333;
+  background-color: #000;
   color: white;
   border: none;
   width: 50px;
@@ -59,20 +66,23 @@ button {
   animation: pulse 2s infinite;
 }
 
+/* Footer tetap di bawah */
 footer {
   text-align: center;
   padding: 15px;
-  background-color: #222;
+  background-color: #003366;
   color: white;
+  margin-top: auto;
 }
 
+/* Info musik */
 .music-info {
   text-align: center;
   font-style: italic;
-  color: #444;
+  color: white;
 }
 
-/* Hamburger and sidebar */
+/* Hamburger dan Sidebar */
 .hamburger {
   font-size: 26px;
   position: fixed;
@@ -80,7 +90,7 @@ footer {
   left: 20px;
   cursor: pointer;
   z-index: 1001;
-  background-color: #0077cc;
+  background-color: #000;
   color: white;
   padding: 10px 15px;
   border-radius: 5px;
@@ -92,7 +102,7 @@ footer {
   top: 0;
   width: 200px;
   height: 100%;
-  background-color: #0077cc;
+  background-color: #004a99;
   padding-top: 60px;
   transition: left 0.3s ease;
   z-index: 1000;
@@ -120,19 +130,21 @@ footer {
   left: 0;
 }
 
+/* Sidebar buka efek margin */
 body.sidebar-open {
   margin-left: 200px;
   transition: margin-left 0.3s ease;
 }
 
+/* Efek tombol musik */
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(0, 119, 204, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
   }
   70% {
-    box-shadow: 0 0 0 15px rgba(0, 119, 204, 0);
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(0, 119, 204, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
