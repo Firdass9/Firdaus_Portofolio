@@ -6,6 +6,17 @@ body {
   color: #333;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+}
+
 header {
   background-color: #0077cc;
   color: white;
