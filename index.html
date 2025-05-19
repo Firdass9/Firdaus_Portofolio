@@ -1,16 +1,17 @@
-<!DOCTYPE html><html lang="id">
+<!-- index.html --><!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Firdaus | Portofolio</title>
+  <title>Firdaus | Beranda</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
+  <div class="hamburger" onclick="toggleNav()">☰</div>
+  <nav class="sidebar" id="sidebar">
     <ul>
-      <li><a href="#home">Firdaus</a></li>
-      <li><a href="#about">Tentang</a></li>
-      <li><a href="#contact">Kontak</a></li>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="tentang.html">Tentang</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
     </ul>
   </nav>  <section id="home" class="slide">
     <header>
@@ -20,13 +21,6 @@
       </div>
       <p>Web Developer | Belajar JavaScript</p>
     </header>
-  </section>  <section id="about" class="slide">
-    <h2>Tentang Saya</h2>
-    <p>Saya adalah pemula yang sedang belajar membuat website menggunakan HTML, CSS, dan JavaScript.</p>
-  </section>  <section id="contact" class="slide">
-    <h2>Kontak</h2>
-    <button onclick="showContact()">Tampilkan Info Kontak</button>
-    <p id="contact-info" style="display: none;">Email: firdaus@example.com</p>
   </section><audio id="background-music" src="fourtwnty-mangu.mp3" autoplay loop muted></audio>
 
   <p class="music-info">Klik ♫ untuk play musik</p>
