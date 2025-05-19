@@ -36,3 +36,18 @@ function toggleNav() {
   contentWrapper.classList.toggle("sidebar-shift");
   overlay.classList.toggle("show");
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  const targets = document.querySelectorAll(".scroll-animate");
+  targets.forEach((el) => observer.observe(el));
+});
