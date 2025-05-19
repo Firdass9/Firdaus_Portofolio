@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Saya</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Firdaus | Portofolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <h1 id="nama"></h1>
-        <p id="tentang"></p>
-        <ul id="kontak"></ul>
-    </div>
-    <script src="script.js"></script>
+  <header>
+    <h1>Firdaus</h1>
+    <p>Web Developer | Belajar JavaScript</p>
+  </header>
+
+  <section class="about">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah pemula yang sedang belajar membuat website menggunakan HTML, CSS, dan JavaScript.</p>
+  </section>
+
+  <section class="contact">
+    <h2>Kontak</h2>
+    <button onclick="showContact()">Tampilkan Info Kontak</button>
+    <p id="contact-info" style="display: none;">Email: firdaus@example.com</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Firdaus. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
