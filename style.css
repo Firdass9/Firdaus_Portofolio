@@ -127,7 +127,13 @@ body.sidebar-open {
     width: 180px;
   }
 
-  body.sidebar-open {
+  .content-wrapper.sidebar-shift {
+  margin-left: 200px;
+  transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper.sidebar-shift {
     margin-left: 180px;
   }
 }
