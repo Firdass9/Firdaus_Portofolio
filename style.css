@@ -141,11 +141,6 @@ body.sidebar-open {
   transition: margin-left 0.3s ease;
 }
 
-/* Responsif sidebar */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 180px;
-  }
 
   .content-wrapper.sidebar-shift {
   margin-left: 200px;
