@@ -1,71 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Firdaus | Portofolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Firdaus</h1>
-    <div style="text-align: center; margin-top: 10px;">
-      <img src="https://i.imgur.com/Kdo11lz.jpeg" alt="Foto Firdaus" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
-    </div>
-    <p>Web Developer | Belajar JavaScript</p>
-  </header>
-
-  <section class="about">
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Firdaus</a></li>
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+  </nav>  <section id="home" class="slide">
+    <header>
+      <h1>Firdaus</h1>
+      <div style="text-align: center; margin-top: 10px;">
+        <img src="https://i.imgur.com/Kdo11lz.jpeg" alt="Foto Firdaus" class="profile-img">
+      </div>
+      <p>Web Developer | Belajar JavaScript</p>
+    </header>
+  </section>  <section id="about" class="slide">
     <h2>Tentang Saya</h2>
     <p>Saya adalah pemula yang sedang belajar membuat website menggunakan HTML, CSS, dan JavaScript.</p>
-  </section>
-
-  <section class="contact">
+  </section>  <section id="contact" class="slide">
     <h2>Kontak</h2>
     <button onclick="showContact()">Tampilkan Info Kontak</button>
     <p id="contact-info" style="display: none;">Email: firdaus@example.com</p>
-  </section>
+  </section><audio id="background-music" src="fourtwnty-mangu.mp3" autoplay loop muted></audio>
 
-  <audio id="background-music" src="fourtwnty-mangu.mp3" autoplay loop muted></audio>
-
-  <p class="music-info animate-text">Klik ♫ untuk play musik</p>
-
-  <button id="toggle-music" onclick="toggleMusic()">♫</button>
-
-  <footer>
+  <p class="music-info">Klik ♫ untuk play musik</p>
+  <button id="toggle-music" onclick="toggleMusic()">♫</button>  <footer>
     <p>© 2025 Firdaus. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
-  <script>
-    function showContact() {
-      const info = document.getElementById("contact-info");
-      if (info.style.display === "none" || info.style.display === "") {
-        info.style.display = "block";
-        info.style.opacity = 0;
-        setTimeout(() => {
-          info.style.transition = "opacity 0.5s ease-in";
-          info.style.opacity = 1;
-        }, 10);
-      } else {
-        info.style.opacity = 0;
-        setTimeout(() => {
-          info.style.display = "none";
-        }, 500);
-      }
-    }
-
-    function toggleMusic() {
-      const music = document.getElementById("background-music");
-      if (music.muted) {
-        music.muted = false;
-        music.play();
-      } else if (music.paused) {
-        music.play();
-      } else {
-        music.pause();
-      }
-    }
-  </script>
-</body>
+  </footer>  <script src="script.js"></script></body>
 </html>
