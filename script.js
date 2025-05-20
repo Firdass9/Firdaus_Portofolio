@@ -55,3 +55,8 @@ function createConfetti() {
 }
 
 setInterval(createConfetti, 300);
+
+function closeBanner() {
+  const banner = document.getElementById("learningBanner");
+  banner.style.display = "none";
+}
