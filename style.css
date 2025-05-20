@@ -126,7 +126,7 @@ header {
 .social-icon {
   color: white;
   font-size: 50px;
-  margin: 0 10px;
+  margin-top: 20px; /* dari 40px jadi 20px */
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -144,6 +144,7 @@ header {
   border: 4px solid white;
   transition: transform 0.6s ease, box-shadow 0.6s ease;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+margin-top: 40px; /* dari 80px jadi 40px */
 }
 
 .profile-img:hover {
@@ -157,10 +158,15 @@ header {
 }
 
 .slide-paragraph {
+  text-align: left; /* dari center jadi left */
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+  font-size: 1.2rem;
+  line-height: 1.6;
   opacity: 0;
-  transform: translateY(30px);
-  animation: slideUp 1s ease forwards;
-  margin-bottom: 1rem;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .slide-paragraph:nth-child(1) {
@@ -185,6 +191,8 @@ animation-delay: 3.5s;
 
 .message-container {
   text-align: left;
+  margin-top: 30px; /* tambahkan jarak dari atas */
+  margin-bottom: 50px; /* tambahkan jarak dari bawah */
 }
 
 
