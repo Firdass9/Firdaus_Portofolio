@@ -122,6 +122,24 @@ header {
   }
 }
 
+.birthday-section {
+  background-color: rgba(240, 240, 240, 0.8); /* abu-abu lembut */
+  padding: 30px;
+  margin: 40px auto;
+  border-radius: 12px;
+  max-width: 800px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.typewriter p {
+  white-space: pre-line;
+  overflow: hidden;
+  border-right: .15em solid #555;
+  font-size: 16px;
+}
+
 /* Konten utama */
 .content {
   position: relative;
