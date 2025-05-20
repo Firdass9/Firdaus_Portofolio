@@ -1,46 +1,72 @@
-// Sticky Navigation Menu
-let nav = document.querySelector("nav");
-let scrollBtn = document.querySelector(".scroll-button a");
+// Redirect otomatis dari splash ke form.html
+if (window.location.pathname.includes("splash.html")) {
+  setTimeout(() => {
+    window.location.href = "splash.html";
+  }, 3000);
+}
 
-// Show/hide sticky navigation and scroll button based on scroll position
-window.onscroll = function () {
-  if (document.documentElement.scrollTop > 20) {
-    nav.classList.add("sticky");
-    scrollBtn.style.display = "block";
+function toggleMusic() {
+  const music = document.getElementById("background-music");
+  if (music.muted) {
+    music.muted = false;
+    music.play();
+  } else if (music.paused) {
+    music.play();
   } else {
-    nav.classList.remove("sticky");
-    scrollBtn.style.display = "none";
+    music.pause();
   }
-};
+}
 
-// Side Navigation Menu
-let body = document.querySelector("body");
-let navBar = document.querySelector(".navbar");
-let menuBtn = document.querySelector(".menu-btn");
-let cancelBtn = document.querySelector(".cancel-btn");
+console.log("Card aktif!");
 
-// Open side navigation
-menuBtn.onclick = function () {
-  navBar.classList.add("active");
-  menuBtn.style.opacity = "0";
-  menuBtn.style.pointerEvents = "none";
-  body.style.overflow = "hidden";
-  scrollBtn.style.pointerEvents = "none";
-};
 
-const hideNavMenu = () => {
-  navBar.classList.remove("active");
-  menuBtn.style.opacity = "1";
-  menuBtn.style.pointerEvents = "auto";
-  body.style.overflow = "auto";
-  scrollBtn.style.pointerEvents = "auto";
-};
+function showContact() {
+  const info = document.getElementById("contact-info");
+  if (info.style.display === "none" || info.style.display === "") {
+    info.style.display = "block";
+    info.style.opacity = 0;
+    setTimeout(() => {
+      info.style.transition = "opacity 0.5s ease-in";
+      info.style.opacity = 1;
+    }, 10);
+  } else {
+    info.style.opacity = 0;
+    setTimeout(() => {
+      info.style.display = "none";
+    }, 500);
+  }
+}
 
-// Close side navigation
-cancelBtn.onclick = hideNavMenu;
+function toggleNav() {
+  const sidebar = document.getElementById("sidebar");
+  const contentWrapper = document.querySelector(".content-wrapper");
+  const overlay = document.getElementById("overlay");
 
-// Close side navigation when a menu link is clicked
-let navLinks = document.querySelectorAll(".menu li a");
-navLinks.forEach((link) => {
-  link.addEventListener("click", hideNavMenu);
+  sidebar.classList.toggle("show");
+  contentWrapper.classList.toggle("sidebar-shift");
+  overlay.classList.toggle("show");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  const targets = document.querySelectorAll(".scroll-animate");
+  targets.forEach((el) => observer.observe(el));
 });
+
+// Autoplay music saat halaman dibuka, atau setelah klik jika diblokir browser
+  const music = document.getElementById("background-music");
+  music.play().catch(() => {
+    // Jika autoplay gagal, tunggu klik pertama
+    document.body.addEventListener("click", () => {
+      music.play();
+    }, { once: true });
+  });
