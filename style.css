@@ -183,6 +183,11 @@ animation-delay: 3.5s;
   }
 }
 
+.message-container {
+  text-align: left;
+}
+
+
 @keyframes zoomIn {
   from {
     transform: scale(0.8);
