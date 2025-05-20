@@ -1,3 +1,10 @@
+// Redirect ke form.html setelah 3 detik
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    window.location.href = "form.html";
+  }, 3000); // waktu 3 detik
+});
+
 function toggleMusic() {
   const music = document.getElementById("background-music");
   if (music.muted) {
@@ -11,6 +18,7 @@ function toggleMusic() {
 }
 
 console.log("Card aktif!");
+
 
 function showContact() {
   const info = document.getElementById("contact-info");
