@@ -284,3 +284,20 @@ body.dark footer {
     opacity: 0;
   }
 }
+
+.top-balloon {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+  animation: float 2s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
