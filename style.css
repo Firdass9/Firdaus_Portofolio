@@ -54,6 +54,13 @@ main {
   animation: fadeInUp 1s ease-out forwards;
 }
 
+@media (max-width: 768px) {
+  .content-wrapper.sidebar-shift {
+    margin-left: 180px;
+    transition: margin-left 0.3s ease;
+  }
+}
+
 .fade-slide:nth-child(2) {
   animation-delay: 0.3s;
 }
