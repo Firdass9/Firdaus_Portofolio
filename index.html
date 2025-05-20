@@ -36,12 +36,6 @@
     </ul>
   </nav>
 
-<section class="birthday-section">
-  <div class="typewriter">
-    <p id="birthdayMessage">p>
-  </div>
-</section>
-
   <!-- Konten utama -->
   <main class="content-wrapper">
     <section class="content">
@@ -57,6 +51,12 @@
   </div>
   <p>Web Developer | Belajar JavaScript</p>
 </header>
+
+<section class="birthday-section">
+  <div class="typewriter">
+    <p id="birthdayMessage"></p>
+  </div>
+</section>
 
      <p class="music-info">Klik ♫ untuk play musik</p>
       <button id="toggle-music" onclick="toggleMusic()">♫</button>
@@ -89,7 +89,7 @@ function typeWriter() {
   if (i < text.length) {
     document.getElementById("birthdayMessage").innerHTML += text.charAt(i);
     i++;
-    setTimeout(typeWriter, 35);
+    setTimeout(typeWriter, 60);
   }
 }
 window.onload = typeWriter;
