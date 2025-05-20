@@ -25,16 +25,6 @@
     background: #4070f4;
 }
 
-#bg-video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
-  object-fit: cover;
-  opacity: 0.8;
-}
 
 /* navbar styling */
 nav{
