@@ -1,82 +1,212 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohamad Firdaus | Beranda</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-<div class="card">
-  <h2>CARD</h2>
-</div>
-  <video autoplay muted loop playsinline id="bg-video">
-    <source src="Firdaus2025.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
-
-  <div class="hamburger" onclick="toggleNav()">☰</div>
-  <div class="hint-text">🔺</div>
-  <div class="arrow-up"></div>
-  <div id="overlay" class="overlay" onclick="toggleNav()"></div>
-
-  <nav class="sidebar" id="sidebar">
-    <ul>
-      <li><a href="index.html">Beranda</a></li>
-      <li><a href="tentang.html">Tentang</a></li>
-      <li><a href="kontak.html">Kontak</a></li>
-      <li><a href="#">Sertifikat</a></li>
-      <li><a href="#">CV</a></li>
-      <li><a href="#">Kegiatan</a></li>
-      <li><a href="#">FOTO</a></li>
-      <li><a href="#">Sekolah</a></li>
-    </ul>
-  </nav>
-
-  <main class="content-wrapper">
-    <section class="content">
-      <header>
-        <div style="text-align: center; margin-bottom: 10px;">
-          <a href="https://www.instagram.com/firdaus_jv?igsh=MWwxaWZka2ZpdzM3Zw==" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="https://github.com/Firdass9" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/mohamad-firdaus-052b451ba" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <h1>Mohamad Firdaus</h1>
-        <div style="text-align: center; margin-top: 10px;">
-          <img src="https://i.imgur.com/Kdo11lz.jpeg" alt="Foto Firdaus" class="profile-img">
-        </div>
-        <p>Web Developer | Belajar JavaScript</p>
-      </header>
-
-      <div class="message-container">
-        <p class="slide-paragraph">Hai, masa kecilku.
-        Hari ini, usiaku telah genap 27 tahun. Selamat bertambah umur, Firdaus. Ini bukan sekadar angka—ini adalah bukti bahwa kamu telah bertahan sejauh ini, melewati banyak hal yang dulu mungkin terasa mustahil. Rasanya baru kemarin aku berlari-lari kecil dengan penuh rasa ingin tahu, tanpa tahu betapa berliku jalan yang akan kulewati.</p>
-
-        <p class="slide-paragraph">Tapi di tengah semua itu, aku masih mengingatmu—versi kecil dari diriku yang polos, penuh mimpi, dan belum mengenal kata menyerah.
-
-        Aku ingin kau tahu, aku masih membawa harapanmu. Meskipun sering terjatuh, meskipun langkahku kadang terseok, aku tetap berdiri. Hari ini, aku berjanji padamu:
-        Aku akan mewujudkan mimpi kita.</p>
-
-        <p class="slide-paragraph">Aku akan menjadikannya nyata, bukan hanya untukku hari ini, tapi juga untukmu—anak kecil yang dulu percaya bahwa segala sesuatu mungkin terjadi selama kita mau berusaha dan tidak berhenti berharap.
-
-        Terima kasih sudah bertahan, terima kasih sudah percaya.
-        Selamat ulang tahun, untuk diriku sendiri.
-        Kita masih di sini, dan perjalanan ini belum selesai.</p>
-      </div>
-
-      <p class="music-info">Klik ♫ untuk play musik</p>
-      <button id="toggle-music" onclick="toggleMusic()">♫</button>
-    </section>
-
-    <footer>
-      © 2025 Firdaus. All rights reserved
-    </footer>
-  </main>
-
-  <audio id="background-music" src="Lirik KISAH SEMPURNA - MAHALINI  SHORT.mp3" autoplay loop></audio>
-
-  <script src="script.js"></script>
-</body>
+<!doctype html><!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>Portfolio Mohamad Firdaus</title> 
+  <link rel="stylesheet" href="style.css"> <!-- Fontawesome CDN Link --> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ </head> 
+ <body> <!-- Move to up button --> 
+  <video autoplay muted loop id="bg-video"> 
+   <source src="bg-video.mp4" type="video/mp4"> Your browser does not support HTML5 video. 
+  </video> 
+  <div class="scroll-button"> <a href="#home"><i class="fas fa-arrow-up"></i></a> 
+  </div> <!-- navgaition menu --> 
+  <nav> 
+   <div class="navbar"> 
+    <div class="logo"> <a href="#">Portfolio.</a> 
+    </div> 
+    <ul class="menu"> 
+     <li><a href="#home">Home</a></li> 
+     <li><a href="#about">About</a></li> 
+     <li><a href="#skills">Skills</a></li> 
+     <li><a href="#services">Services</a></li> 
+     <li><a href="#contact">Contact</a></li> 
+     <div class="cancel-btn"> <i class="fas fa-times"></i> 
+     </div> 
+    </ul> 
+    <div class="media-icons"> <a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> 
+    </div> 
+   </div> 
+   <div class="menu-btn"> <i class="fas fa-bars"></i> 
+   </div> 
+  </nav> <!-- Home Section Start --> 
+  <section class="home" id="home"> 
+   <div class="home-content"> 
+    <div class="text"> 
+     <div class="text-one">
+       Hallo, 
+     </div> 
+     <div class="text-two">
+       Saya Mohamad Firdaus 
+     </div> 
+     <div class="text-three">
+       UI/UX Designer 
+     </div> 
+     <div class="text-four">
+       Dari Indonesia 
+     </div> 
+    </div> 
+    <div class="button"> <button>Hire Me</button> 
+    </div> 
+   </div> 
+  </section> <!-- About Section Start --> 
+  <section class="about" id="about"> 
+   <div class="content"> 
+    <div class="title"> <span>About Me</span> 
+    </div> 
+    <div class="about-details"> 
+     <div class="left"> <a href="https://ibb.co/nqDv2zPw"><img src="https://i.ibb.co/nqDv2zPw/Firdaus98.jpg" alt="Firdaus98" border="0"></a> 
+     </div> 
+     <div class="right"> 
+      <div class="topic">
+        Happy Birthday 🎉🎉 
+      </div> 
+      <p> </p>Hai, masa kecilku. Hari ini, usiaku telah genap 27 tahun. Selamat bertambah umur, Firdaus. Ini bukan sekadar angka—ini adalah bukti bahwa kamu telah bertahan sejauh ini, melewati banyak hal yang dulu mungkin terasa mustahil. Rasanya baru kemarin aku berlari-lari kecil dengan penuh rasa ingin tahu, tanpa tahu betapa berliku jalan yang akan kulewati Tapi di tengah semua itu, aku masih mengingatmu—versi kecil dari diriku yang polos, penuh mimpi, dan belum mengenal kata menyerah. 
+      <p></p> 
+      <br> 
+      <p></p>Aku ingin kau tahu, aku masih membawa harapanmu. Meskipun sering terjatuh, meskipun langkahku kadang terseok, aku tetap berdiri. Hari ini, aku berjanji padamu: Aku akan mewujudkan mimpi kita Aku akan menjadikannya nyata, bukan hanya untukku hari ini, tapi juga untukmu—anak kecil yang dulu percaya bahwa segala sesuatu mungkin terjadi selama kita mau berusaha dan tidak berhenti berharap. 
+      <p></p> 
+      <br> 
+      <p>Terima kasih sudah bertahan, terima kasih sudah percaya. Selamat ulang tahun, untuk diriku sendiri. Kita masih di sini, dan perjalanan ini belum selesai</p> 
+      <div class="button"> <button>Download CV</button> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> <!-- My Skill Section Start --> <!-- Section Tag and Other Div will same where we need to put same CSS --> 
+  <section class="skills" id="skills"> 
+   <div class="content"> 
+    <div class="title"> <span>My Skills</span> 
+    </div> 
+    <div class="skills-details"> 
+     <div class="text"> 
+      <div class="topic">
+        Skills Reflects Our Knowledge 
+      </div> 
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus natus tenetur tempora? Quasi, rem quas omnis. Porro rem aspernatur reiciendis ut praesentium minima ad, quos, officia! Illo libero, et, distinctio repellat sed nesciunt est modi quaerat placeat. Quod molestiae, alias?</p> 
+      <div class="experience"> 
+       <div class="num">
+         10 
+       </div> 
+       <div class="exp">
+         Years Of 
+        <br> Experience 
+       </div> 
+      </div> 
+     </div> 
+     <div class="boxes"> 
+      <div class="box"> 
+       <div class="topic">
+         HTML 
+       </div> 
+       <div class="per">
+         90% 
+       </div> 
+      </div> 
+      <div class="box"> 
+       <div class="topic">
+         CSS 
+       </div> 
+       <div class="per">
+         80% 
+       </div> 
+      </div> 
+      <div class="box"> 
+       <div class="topic">
+         JavScript 
+       </div> 
+       <div class="per">
+         70% 
+       </div> 
+      </div> 
+      <div class="box"> 
+       <div class="topic">
+         PHP 
+       </div> 
+       <div class="per">
+         60% 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> <!-- My Services Section Start --> 
+  <section class="services" id="services"> 
+   <div class="content"> 
+    <div class="title"> <span>My Services</span> 
+    </div> 
+    <div class="boxes"> 
+     <div class="box"> 
+      <div class="icon"> <i class="fas fa-desktop"></i> 
+      </div> 
+      <div class="topic">
+        Web Devlopment 
+      </div> 
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p> 
+     </div> 
+     <div class="box"> 
+      <div class="icon"> <i class="fas fa-paint-brush"></i> 
+      </div> 
+      <div class="topic">
+        Graphic Design 
+      </div> 
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p> 
+     </div> 
+     <div class="box"> 
+      <div class="icon"> <i class="fas fa-chart-line"></i> 
+      </div> 
+      <div class="topic">
+        Digital Marketing 
+      </div> 
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p> 
+     </div> 
+     <div class="box"> 
+      <div class="icon"> <i class="fab fa-android"></i> 
+      </div> 
+      <div class="topic">
+        Icon Design 
+      </div> 
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p> 
+     </div> 
+     <div class="box"> 
+      <div class="icon"> <i class="fas fa-camera-retro"></i> 
+      </div> 
+      <div class="topic">
+        Photography 
+      </div> 
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p> 
+     </div> 
+     <div class="box"> 
+      <div class="icon"> <i class="fas fa-tablet-alt"></i> 
+      </div> 
+      <div class="topic">
+        Apps Devlopment 
+      </div> 
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p> 
+     </div> 
+    </div> 
+   </div> 
+  </section> <!-- Contact Me section Start --> 
+  <section class="contact" id="contact"> 
+   <div class="content"> 
+    <div class="title"> <span>Contact Me</span> 
+    </div> 
+    <div class="text"> 
+     <div class="topic">
+       Have Any Project? 
+     </div> 
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam neque ipsum corrupti dolores, facere numquam voluptate aspernatur sit perferendis qui nisi modi! Recusandae deserunt consequatur voluptatibus alias repellendus nobis eligendi.</p> 
+     <div class="button"> <button>Let's Chat</button> 
+     </div> 
+    </div> 
+   </div> 
+  </section> <!-- Footer Section Start --> 
+  <footer> 
+   <div class="text"> <span>Created By <a href="#">CodingLab</a> | © 2021 All Rights Reserved</span> 
+   </div> 
+  </footer> 
+  <script src="script.js"></script> 
+ </body>
 </html>
