@@ -215,7 +215,7 @@ section .title span::after{
 }
 .about-details .left img {
   border-radius: 50%;               /* Bikin bulat */
-  border: 4px solid #0ef;           /* Warna garis tepi biru neon */
+  border: 7px solid #0ef;           /* Warna garis tepi biru neon */
   width: 250px;
   height: 250px;
   object-fit: cover;
