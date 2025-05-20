@@ -1,7 +1,7 @@
 // Redirect ke form.html setelah 3 detik
 window.addEventListener("load", () => {
   setTimeout(() => {
-    window.location.href = "form.html";
+    window.location.href = "spalsh.html";
   }, 3000); // waktu 3 detik
 });
 
