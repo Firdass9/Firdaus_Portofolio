@@ -181,10 +181,11 @@ header {
   left: 20px;
   cursor: pointer;
   z-index: 1003;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.7); /* Tambahkan background gelap semi transparan */
   color: white;
   padding: 10px 15px;
   border-radius: 5px;
+  border: 1px solid white; /* tambahkan border agar lebih kontras */
 }
 
 
