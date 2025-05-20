@@ -36,3 +36,22 @@ document.getElementById('play-music-btn').addEventListener('click', function () 
   const music = document.getElementById('bg-music');
   music.play();
 });
+
+const confettiContainer = document.getElementById("confetti-container");
+
+function createConfetti() {
+  const confetti = document.createElement("div");
+  confetti.classList.add("confetti");
+  confetti.innerText = "🎉";
+
+  confetti.style.left = Math.random() * 100 + "vw";
+  confetti.style.animationDuration = 2 + Math.random() * 3 + "s";
+
+  confettiContainer.appendChild(confetti);
+
+  setTimeout(() => {
+    confetti.remove();
+  }, 5000);
+}
+
+setInterval(createConfetti, 300);
