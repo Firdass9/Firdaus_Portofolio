@@ -30,6 +30,8 @@ function showContact() {
 function toggleNav() {
   const sidebar = document.getElementById("sidebar");
   const contentWrapper = document.querySelector(".content-wrapper");
+
+if (sidebar.classList.contains('active')) { sidebar.classList.remove('active'); overlay.style.display = 'none'; } else { sidebar.classList.add('active'); overlay.style.display = 'block'; } }
   const overlay = document.getElementById("overlay");
 
   sidebar.classList.toggle("show");
