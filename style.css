@@ -194,6 +194,11 @@ section .content{
   justify-content: space-between;
   align-items: center;
 }
+
+.right p {
+  color: white;
+}
+
 section .title{
   display: flex;
   justify-content: center;
