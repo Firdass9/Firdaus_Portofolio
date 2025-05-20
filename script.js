@@ -1,72 +1,33 @@
-// Redirect otomatis dari splash ke form.html
-if (window.location.pathname.includes("splash.html")) {
-  setTimeout(() => {
-    window.location.href = "splash.html";
-  }, 3000);
-}
+// Theme Toggle
+const toggleBtn = document.getElementById('theme-toggle');
+const body = document.body;
+const icon = toggleBtn.querySelector('i');
 
-function toggleMusic() {
-  const music = document.getElementById("background-music");
-  if (music.muted) {
-    music.muted = false;
-    music.play();
-  } else if (music.paused) {
-    music.play();
+toggleBtn.addEventListener('click', () => {
+  body.classList.toggle('dark');
+
+  if (body.classList.contains('dark')) {
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
   } else {
-    music.pause();
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
   }
-}
-
-console.log("Card aktif!");
-
-
-function showContact() {
-  const info = document.getElementById("contact-info");
-  if (info.style.display === "none" || info.style.display === "") {
-    info.style.display = "block";
-    info.style.opacity = 0;
-    setTimeout(() => {
-      info.style.transition = "opacity 0.5s ease-in";
-      info.style.opacity = 1;
-    }, 10);
-  } else {
-    info.style.opacity = 0;
-    setTimeout(() => {
-      info.style.display = "none";
-    }, 500);
-  }
-}
-
-function toggleNav() {
-  const sidebar = document.getElementById("sidebar");
-  const contentWrapper = document.querySelector(".content-wrapper");
-  const overlay = document.getElementById("overlay");
-
-  sidebar.classList.toggle("show");
-  contentWrapper.classList.toggle("sidebar-shift");
-  overlay.classList.toggle("show");
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  }, {
-    threshold: 0.2
-  });
-
-  const targets = document.querySelectorAll(".scroll-animate");
-  targets.forEach((el) => observer.observe(el));
 });
 
-// Autoplay music saat halaman dibuka, atau setelah klik jika diblokir browser
-  const music = document.getElementById("background-music");
-  music.play().catch(() => {
-    // Jika autoplay gagal, tunggu klik pertama
-    document.body.addEventListener("click", () => {
-      music.play();
-    }, { once: true });
+// Slide Animation
+const paragraphs = document.querySelectorAll('.slide-paragraph p');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+      entry.target.style.transition = 'opacity 1s ease, transform 1s ease';
+      observer.unobserve(entry.target);
+    }
   });
+}, { threshold: 0.1 });
+
+paragraphs.forEach(p => {
+  observer.observe(p);
+});
