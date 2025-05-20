@@ -1,9 +1,9 @@
-// Redirect ke form.html setelah 3 detik
-window.addEventListener("load", () => {
+// Redirect otomatis dari splash ke form.html
+if (window.location.pathname.includes("splash.html")) {
   setTimeout(() => {
     window.location.href = "splash.html";
-  }, 3000); // waktu 3 detik
-});
+  }, 3000);
+}
 
 function toggleMusic() {
   const music = document.getElementById("background-music");
