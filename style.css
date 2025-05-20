@@ -291,3 +291,24 @@ body.dark footer {
     transform: translateY(-10px);
   }
 }
+
+.gif-widget {
+  position: fixed;
+  bottom: 0;
+  left: 10px;
+  width: 130px;
+  height: 160px;
+  z-index: 999;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+}
+.gif-widget img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.gif-widget a {
+  color: #000;
+  text-decoration: none;
+}
