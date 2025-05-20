@@ -230,6 +230,14 @@ section .title span::after{
   transform: scale(1.05);          /* Efek zoom pas hover */
 }
 
+.about .left img {
+  width: 250px; /* atur ukuran sesuai keinginan */
+  height: 250px; /* harus sama agar proporsi bulat */
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
 }
 .about .left img{
   height: 400px;
