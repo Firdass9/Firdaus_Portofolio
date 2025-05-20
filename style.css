@@ -245,43 +245,33 @@ body.dark footer {
   background-color: #444;
 }
 
-.learning-banner {
+.flying-banner {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
   background-color: #ffc107;
-  color: #000;
-  text-align: center;
-  padding: 10px 50px 10px 10px;
+  z-index: 50;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.flying-banner p {
+  white-space: nowrap;
+  display: inline-block;
+  animation: fly-text 15s linear infinite;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
-  position: relative;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.close-banner {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 20px;
-  font-weight: bold;
   color: #000;
-  cursor: pointer;
+  padding-left: 100%;
 }
 
-
-.confetti {
-  position: fixed;
-  top: -50px;
-  font-size: 24px;
-  animation: fall linear forwards;
-  pointer-events: none;
-  z-index: 9999;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(110vh);
-    opacity: 0;
+@keyframes fly-text {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 
