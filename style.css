@@ -244,3 +244,19 @@ body.dark footer {
 #play-music-btn:hover {
   background-color: #444;
 }
+
+.confetti {
+  position: fixed;
+  top: -50px;
+  font-size: 24px;
+  animation: fall linear forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
