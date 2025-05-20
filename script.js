@@ -51,3 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const targets = document.querySelectorAll(".scroll-animate");
   targets.forEach((el) => observer.observe(el));
 });
+
+// Autoplay music saat halaman dibuka, atau setelah klik jika diblokir browser
+  const music = document.getElementById("background-music");
+  music.play().catch(() => {
+    // Jika autoplay gagal, tunggu klik pertama
+    document.body.addEventListener("click", () => {
+      music.play();
+    }, { once: true });
+  });
