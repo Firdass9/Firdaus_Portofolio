@@ -83,5 +83,22 @@ Hai, masa kecilku.
   <audio id="background-music" src="Lirik KISAH SEMPURNA - MAHALINI  SHORT.mp3" autoplay loop></audio>
 
   <script src="script.js"></script>
+<script>
+  const paragraphs = document.querySelectorAll('.slide-paragraph');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        entry.target.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  paragraphs.forEach(p => {
+    observer.observe(p);
+  });
+</script>
 </body>
 </html>
