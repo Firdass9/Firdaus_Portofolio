@@ -31,3 +31,8 @@ const observer = new IntersectionObserver(entries => {
 paragraphs.forEach(p => {
   observer.observe(p);
 });
+
+document.getElementById('play-music-btn').addEventListener('click', function () {
+  const music = document.getElementById('bg-music');
+  music.play();
+});
