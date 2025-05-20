@@ -245,6 +245,19 @@ body.dark footer {
   background-color: #444;
 }
 
+.learning-banner {
+  background-color: #ffc107;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+
 .confetti {
   position: fixed;
   top: -50px;
