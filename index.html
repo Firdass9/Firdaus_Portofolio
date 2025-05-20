@@ -56,6 +56,13 @@
 </div>
 
 <script src="script.js"></script>
-
+<script>
+  // Saat user klik pertama kali di mana saja, unmute dan play
+  window.addEventListener('click', function () {
+    const audio = document.getElementById('bg-music');
+    audio.muted = false;
+    audio.play();
+  }, { once: true });
+</script>
   </body>
 </html>
