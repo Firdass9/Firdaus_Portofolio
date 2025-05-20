@@ -1,104 +1,60 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohamad Firdaus | Beranda</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-<div class="card-glow">
-  <div class="glow-border"></div>
-  <div class="glow-content">
-    <h2>Mohamad Firdaus</h2>
-    <p>Web Developer</p>
-  </div>
-</div>
-  <video autoplay muted loop playsinline id="bg-video">
-    <source src="Firdaus2025.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
+<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fullscreen Overlay Navigation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="content-wrap">
+        <input type="checkbox" id="active">
+        <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+        <button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button><div class="wrapper">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </div>
 
-  <div class="hamburger" onclick="toggleNav()">☰</div>
-  <div class="hint-text">🔺</div>
-  <div class="arrow-up"></div>
-  <div id="overlay" class="overlay" onclick="toggleNav()"></div>
+    <main class="content-wrapper">
+      <section class="content">
+        <h1 class="title-name">Mohamad Firdaus</h1>
+        <div style="text-align: center; margin-top: 10px;">
+          <img src="https://i.imgur.com/Kdo11lz.jpeg" alt="Foto Firdaus" class="profile-img">
+        </div>
+        <div class="content">
+          <div class="title">Hai, masa kecilku.</div>
+          <div class="slide-paragraph">
+            <p>
+              Hari ini, usiaku telah genap 27 tahun. Selamat bertambah umur, Firdaus. Ini bukan sekadar angka—ini adalah bukti bahwa kamu telah bertahan sejauh ini, melewati banyak hal yang dulu mungkin terasa mustahil. Rasanya baru kemarin aku berlari-lari kecil dengan penuh rasa ingin tahu, tanpa tahu betapa berliku jalan yang akan kulewati.
+            </p>
+            <p>
+              Tapi di tengah semua itu, aku masih mengingatmu—versi kecil dari diriku yang polos, penuh mimpi, dan belum mengenal kata menyerah. Aku ingin kau tahu, aku masih membawa harapanmu. Meskipun sering terjatuh, meskipun langkahku kadang terseok, aku tetap berdiri. Hari ini, aku berjanji padamu: Aku akan mewujudkan mimpi kita.
+            </p>
+            <p>
+              Aku akan menjadikannya nyata, bukan hanya untukku hari ini, tapi juga untukmu—anak kecil yang dulu percaya bahwa segala sesuatu mungkin terjadi selama kita mau berusaha dan tidak berhenti berharap. Terima kasih sudah bertahan, terima kasih sudah percaya. Selamat ulang tahun, untuk diriku sendiri. Kita masih di sini, dan perjalanan ini belum selesai.
+            </p>
+          </div>
+        </div>
 
-  <nav class="sidebar" id="sidebar">
-    <ul>
-      <li><a href="index.html">Beranda</a></li>
-      <li><a href="tentang.html">Tentang</a></li>
-      <li><a href="kontak.html">Kontak</a></li>
-      <li><a href="#">Sertifikat</a></li>
-      <li><a href="#">CV</a></li>
-      <li><a href="#">Kegiatan</a></li>
-      <li><a href="#">FOTO</a></li>
-      <li><a href="#">Sekolah</a></li>
-    </ul>
-  </nav>
-
-  <main class="content-wrapper">
-    <section class="content">
-      <header>
-        <div style="text-align: center; margin-bottom: 10px;">
+        <div style="text-align: center; margin-bottom: 20px;">
           <a href="https://www.instagram.com/firdaus_jv?igsh=MWwxaWZka2ZpdzM3Zw==" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
           <a href="https://github.com/Firdass9" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/mohamad-firdaus-052b451ba" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
         </div>
-        <h1>Mohamad Firdaus</h1>
-        <div style="text-align: center; margin-top: 10px;">
-          <img src="https://i.imgur.com/Kdo11lz.jpeg" alt="Foto Firdaus" class="profile-img">
-        </div>
-        <p>Web Developer | Belajar JavaScript</p>
-      </header>
+      </section>
+    </main>
+  </div>
+  <footer>&copy; Firdaus 2025. All rights reserved.</footer>
+</div>
 
-      <div class="message-container" style="text-align: left;">
-        <p class="slide-paragraph">
-Hai, masa kecilku.
-        Hari ini, usiaku telah genap 27 tahun. Selamat bertambah umur, Firdaus. Ini bukan sekadar angka—ini adalah bukti bahwa kamu telah bertahan sejauh ini, melewati banyak hal yang dulu mungkin terasa mustahil. Rasanya baru kemarin aku berlari-lari kecil dengan penuh rasa ingin tahu, tanpa tahu betapa berliku jalan yang akan kulewati.</p>
+<script src="script.js"></script>
 
-        <p class="slide-paragraph">Tapi di tengah semua itu, aku masih mengingatmu—versi kecil dari diriku yang polos, penuh mimpi, dan belum mengenal kata menyerah.
-
-        Aku ingin kau tahu, aku masih membawa harapanmu. Meskipun sering terjatuh, meskipun langkahku kadang terseok, aku tetap berdiri. Hari ini, aku berjanji padamu:
-        Aku akan mewujudkan mimpi kita.</p>
-
-        <p class="slide-paragraph">Aku akan menjadikannya nyata, bukan hanya untukku hari ini, tapi juga untukmu—anak kecil yang dulu percaya bahwa segala sesuatu mungkin terjadi selama kita mau berusaha dan tidak berhenti berharap.
-
-        Terima kasih sudah bertahan, terima kasih sudah percaya.
-        Selamat ulang tahun, untuk diriku sendiri.
-        Kita masih di sini, dan perjalanan ini belum selesai.</p>
-      </div>
-
-      <p class="music-info">Klik ♫ untuk play musik</p>
-      <button id="toggle-music" onclick="toggleMusic()">♫</button>
-    </section>
-
-    <footer>
-      © 2025 Firdaus. All rights reserved
-    </footer>
-  </main>
-
-  <audio id="background-music" src="Lirik KISAH SEMPURNA - MAHALINI  SHORT.mp3" autoplay loop></audio>
-
-  <script src="script.js"></script>
-<script>
-  const paragraphs = document.querySelectorAll('.slide-paragraph');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-        entry.target.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  paragraphs.forEach(p => {
-    observer.observe(p);
-  });
-</script>
-</body>
+  </body>
 </html>
