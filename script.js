@@ -32,7 +32,7 @@ function toggleNav() {
   const contentWrapper = document.querySelector(".content-wrapper");
   const overlay = document.getElementById("overlay");
 
-  sidebar.classList.toggle("active");
+  sidebar.classList.toggle("show");
   contentWrapper.classList.toggle("sidebar-shift");
   overlay.classList.toggle("show");
 }
