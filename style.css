@@ -119,6 +119,20 @@ nav.sticky .menu-btn{
   background-attachment: fixed;
   font-family: 'Ubuntu', sans-serif;
 }
+
+.home .photo {
+  margin-top: 20px;
+}
+
+.home .photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
 .home .home-content{
   width: 90%;
   height: 100%;
@@ -126,6 +140,7 @@ nav.sticky .menu-btn{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 .home .text-one{
   font-size: 25px;
