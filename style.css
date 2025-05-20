@@ -185,10 +185,6 @@ section .content{
   align-items: center;
 }
 
-.right p {
-  color: white;
-}
-
 section .title{
   display: flex;
   justify-content: center;
