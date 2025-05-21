@@ -1,4 +1,4 @@
-* {
+ {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -290,16 +290,4 @@ body.dark footer {
   to {
     transform: translateY(-10px);
   }
-}
-
-.running-bob {
-  position: fixed;
-  bottom: 5px;
-  left: 5px;
-  z-index: 9999;
-}
-
-.running-bob img {
-  width: 100px;
-  height: auto;
 }
