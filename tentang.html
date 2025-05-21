@@ -1,47 +1,75 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tentang Firdaus</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  </video>  <!-- Peringatan belajar -->  <div id="warning-banner" class="warning-banner">
+
+  <!-- Peringatan belajar -->
+  <div id="warning-banner" class="warning-banner">
     <span>Masih dalam tahap belajar</span>
     <button onclick="this.parentElement.style.display='none'">Tutup</button>
-  </div>  <!-- Emoticon terbang -->  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f388/512.gif" alt="Balloon" class="flying-emoji" />  <!-- Widget kiri --><a href="http://algofixs.blogspot.com/2017/01/kumpulan-animasi-untuk-blog-terbaru.html" 
-class="running-bob" 
-title="Want more... Click it."> <img src="http://i1242.photobucket.com/albums/gg532/faizkr8/boblari.gif" alt="Bob lari" /> </a>
+  </div>
 
-  <!-- Menu Navigasi -->  <div class="hamburger" onclick="toggleNav()">☰</div>
-  <div id="overlay" class="overlay" onclick="toggleNav()"></div>
-  <nav class="sidebar" id="sidebar">
-    <ul>
-      <li><a href="index.html">Beranda</a></li>
-      <li><a href="tentang.html">Tentang</a></li>
-      <li><a href="kontak.html">Kontak</a></li>
-      <li><a href="#">Sertifikat</a></li>
-      <li><a href="#">CV</a></li>
-      <li><a href="#">Kegiatan</a></li>
-      <li><a href="#">FOTO</a></li>
-      <li><a href="#">Sekolah</a></li>
-    </ul>
-  </nav>  <!-- Konten -->  <div class="content-wrapper">
-    <section id="home" class="slide">
-      <section class="about-section">
-        <h2 class="title-name">Tentang Saya</h2>
-        <p class="fade-slide about-paragraph" style="text-align: left;">
-          Assalamualaikum Hallo 👋 Nama saya Mohamad Firdaus atau dipanggil Fir 😅. Saya adalah pemula yang sedang belajar membuat website menggunakan HTML, CSS, dan JavaScript. InsyaAllah mohon do'a nya teman-teman 🤲. Walaupun tanpa Laptop/PC, mudah-mudahan ke depannya diberi rezeki untuk membeli Laptop 🤲
-        </p><br>
-        <p class="fade-slide about-paragraph" style="text-align: left;">
-          Saya adalah lulusan SMK jurusan Teknik Komputer dan Jaringan (TKJ), tertarik dengan dunia teknologi terutama pengembangan web dan perangkat lunak. Saya terus belajar bahasa pemrograman dan membangun proyek kecil demi mewujudkan mimpi menjadi Web Developer profesional.
-        </p>
-      </section>
+  <!-- Emoticon terbang -->
+  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f388/512.gif" alt="Balloon" class="flying-emoji" />
+
+  <!-- Widget kiri bawah -->
+  <a href="http://algofixs.blogspot.com/2017/01/kumpulan-animasi-untuk-blog-terbaru.html" 
+     class="running-bob" 
+     title="Want more... Click it.">
+    <img src="http://i1242.photobucket.com/albums/gg532/faizkr8/boblari.gif" alt="Bob lari" />
+  </a>
+
+  <!-- Tombol Hamburger -->
+  <div class="hamburger" onclick="toggleNav()">☰</div>
+
+  <!-- Overlay fullscreen -->
+  <div id="overlay" class="overlay">
+    <div class="overlay-content">
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="kontak.html">Kontak</a>
+      <a href="#">Sertifikat</a>
+      <a href="#">CV</a>
+      <a href="#">Kegiatan</a>
+      <a href="#">FOTO</a>
+      <a href="#">Sekolah</a>
+    </div>
+  </div>
+
+  <!-- Konten -->
+  <div class="content-wrapper">
+    <section class="about-section">
+      <h2 class="title-name">Tentang Saya</h2>
+      <p class="fade-slide about-paragraph" style="text-align: left;">
+        Assalamualaikum Hallo 👋 Nama saya Mohamad Firdaus atau dipanggil Fir 😅. Saya adalah pemula yang sedang belajar membuat website menggunakan HTML, CSS, dan JavaScript. InsyaAllah mohon do'a nya teman-teman 🤲. Walaupun tanpa Laptop/PC, mudah-mudahan ke depannya diberi rezeki untuk membeli Laptop 🤲
+      </p>
+      <br />
+      <p class="fade-slide about-paragraph" style="text-align: left;">
+        Saya adalah lulusan SMK jurusan Teknik Komputer dan Jaringan (TKJ), tertarik dengan dunia teknologi terutama pengembangan web dan perangkat lunak. Saya terus belajar bahasa pemrograman dan membangun proyek kecil demi mewujudkan mimpi menjadi Web Developer profesional.
+      </p>
     </section>
-  </div>  <footer>
-    © 2025 Firdaus. All rights reserved
-  </footer><audio id="background-music" src="Lirik KISAH SEMPURNA - MAHALINI  SHORT.mp3" autoplay loop muted></audio>
+  </div>
 
-  <script src="script.js"></script></body>
+  <!-- Footer -->
+  <footer>
+    © 2025 Firdaus. All rights reserved
+  </footer>
+
+  <!-- Musik latar -->
+  <audio id="background-music" src="Lirik KISAH SEMPURNA - MAHALINI  SHORT.mp3" autoplay loop muted></audio>
+
+  <!-- Script -->
+  <script>
+    function toggleNav() {
+      const overlay = document.getElementById("overlay");
+      overlay.style.display = (overlay.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
 </html>
