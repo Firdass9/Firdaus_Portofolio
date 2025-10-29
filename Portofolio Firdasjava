@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohamad Firdaus — Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png">
+  <meta name="description" content="Portfolio Mohamad Firdaus — UI/UX & Web enthusiast.">
+  <script defer src="script.js"></script>
+  <script src="https://kit.fontawesome.com/a2e0f6b1f6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="nav">
+    <a class="brand" href="#home">Firdaus</a>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu">
+      <a href="#home">Home</a>
+      <a href="#about">Tentang</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Pengalaman</a>
+      <a href="#education">Pendidikan</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero container">
+    <div class="hero-left">
+      <h1 class="reveal">Halo, saya <span>Mohamad Firdaus</span></h1>
+      <p class="muted reveal">UI/UX & Web Enthusiast • Jakarta</p>
+      <p class="reveal">Tertarik pada pengembangan web, desain antarmuka, dan problem solving. Sedang membangun portofolio dan terbuka untuk peluang magang/entry level.</p>
+      <div class="cta reveal">
+        <a class="btn primary" href="#contact">Kontak Saya</a>
+        <a class="btn ghost" href="assets/CV_Mohamad_Firdaus.pdf" target="_blank" rel="noopener">Unduh CV</a>
+      </div>
+      <div class="social reveal">
+        <a aria-label="Github
