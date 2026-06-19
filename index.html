@@ -32,7 +32,10 @@
         .gallery-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
         .gallery-item h4 { margin-top: 10px; color: #38bdf8; }
 
+        /* Styling Profil */
         .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid #38bdf8; margin-bottom: 20px; }
+        .btn-lihat-profil { background-color: #38bdf8; color: #0f172a; padding: 12px 30px; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; margin-top: 20px; transition: 0.3s; }
+        .btn-lihat-profil:hover { background-color: #0ea5e9; transform: scale(1.05); }
     </style>
 </head>
 <body>
@@ -50,6 +53,9 @@
         <img src="Firdas.png" class="profile-img">
         <h1>Mohamad Firdaus</h1>
         <p style="color: #94a3b8;">Digital Creator & AI Developer</p>
+        
+        <!-- TOMBOL LIHAT PROFIL -->
+        <button class="btn-lihat-profil" onclick="showSection('cv')">Lihat Profil</button>
     </section>
 
     <!-- CV PANJANG -->
