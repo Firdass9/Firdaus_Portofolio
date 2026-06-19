@@ -36,6 +36,33 @@
         .profile-img { width: 170px; height: 170px; border-radius: 50%; border: 4px solid #38bdf8; margin-bottom: 20px; }
         .btn-lihat-profil { background-color: #38bdf8; color: #0f172a; padding: 12px 30px; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; margin-top: 20px; transition: 0.3s; }
         .btn-lihat-profil:hover { background-color: #0ea5e9; transform: scale(1.05); }
+
+        /* --- STYLING TEKS BERJALAN (MARQUEE CSS) --- */
+        .marquee-container {
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden;
+            background-color: rgba(30, 41, 59, 0.8);
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 8px 0;
+            margin-top: 15px;
+            white-space: nowrap;
+        }
+
+        .marquee-text {
+            display: inline-block;
+            color: #f59e0b; /* Warna kuning oranye hangat agar terlihat mencolok */
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding-left: 100%;
+            animation: marqueeEffect 12s linear infinite;
+        }
+
+        @keyframes marqueeEffect {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
     </style>
 </head>
 <body>
@@ -53,6 +80,11 @@
         <img src="Firdas.png" class="profile-img">
         <h1>Mohamad Firdaus</h1>
         <p style="color: #94a3b8;">Digital Creator & AI Developer</p>
+        
+        <!-- TEKS BERJALAN -->
+        <div class="marquee-container">
+            <span class="marquee-text">web ini sedang dalam perkembangan dan hanya training • web ini sedang dalam perkembangan dan hanya training</span>
+        </div>
         
         <!-- TOMBOL LIHAT PROFIL -->
         <button class="btn-lihat-profil" onclick="showSection('cv')">Lihat Profil</button>
