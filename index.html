@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio | Firdaus</title>
-    <!-- Font Awesome untuk Ikon Media Sosial & Tech -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome 6.5.1 agar Ikon X (Twitter) Muncul Sempurna -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
         body { background-color: #0f172a; color: #f8fafc; overflow-x: hidden; }
@@ -17,28 +17,45 @@
         .marquee-content { display: inline-block; white-space: nowrap; padding-left: 100%; animation: marquee 15s linear infinite; }
         @keyframes marquee { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
 
-        /* --- KOMPONEN HOME --- */
+        /* --- KOMPONEN GENERAL SECTION --- */
         .page-section { min-height: 100vh; display: none; padding: 120px 20px 40px 20px; max-width: 800px; margin: 0 auto; text-align: center; }
         .active-section { display: block; animation: fadeIn 0.8s ease-out forwards; }
         .animate-item { opacity: 0; animation: fadeIn 0.8s ease-out forwards; }
         .delay-1 { animation-delay: 0.2s; } .delay-2 { animation-delay: 0.4s; } .delay-3 { animation-delay: 0.6s; }
 
+        /* --- HOME STYLING --- */
         .profile-img { width: 170px; height: 170px; border-radius: 50%; border: 4px solid #38bdf8; object-fit: cover; margin-bottom: 20px; }
         .btn-lihat-profil { background-color: #38bdf8; color: #0f172a; padding: 12px 30px; border-radius: 50px; border: none; cursor: pointer; font-weight: bold; margin-bottom: 30px; }
 
-        /* --- SOSIAL MEDIA & TECH GRID --- */
+        /* --- GRID STYLING --- */
         .section-title { font-size: 0.9rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; margin-top: 10px; }
         .social-container, .tech-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 30px; max-width: 400px; margin-left: auto; margin-right: auto; }
         .tech-container { grid-template-columns: repeat(5, 1fr); gap: 10px; }
         
-        .box { background-color: #1e293b; border: 1px solid #334155; padding: 12px; border-radius: 10px; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; color: #f8fafc; transition: 0.3s; }
+        .box { background-color: #1e293b; border: 1px solid #334155; padding: 12px; border-radius: 10px; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; color: #f8fafc; transition: 0.3s; text-decoration: none; }
         .box:hover { color: #38bdf8; border-color: #38bdf8; transform: translateY(-5px); }
 
-        /* Sidebar & MenuIcon tetap sama */
+        /* --- CV STYLING (9 PARAGRAF) --- */
+        .cv-text-container { text-align: left; line-height: 1.8; color: #cbd5e1; }
+        .cv-text-container p { margin-bottom: 1.5rem; text-indent: 20px; }
+        .cv-text-container h2 { color: #38bdf8; margin-bottom: 20px; border-bottom: 2px solid #334155; padding-bottom: 10px; text-align: left; }
+
+        /* --- GALLERY STYLING --- */
+        .gallery-title { color: #38bdf8; margin-bottom: 20px; border-bottom: 2px solid #334155; padding-bottom: 10px; text-align: left; }
+        .gallery-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 20px; text-align: left; }
+        @media (min-width: 600px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+        .gallery-item { background: #1e293b; padding: 15px; border-radius: 12px; border: 1px solid #334155; transition: 0.3s; }
+        .gallery-item:hover { transform: translateY(-5px); border-color: #38bdf8; }
+        .gallery-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; }
+        .gallery-item h4 { color: #38bdf8; font-size: 1.1rem; margin-bottom: 5px; }
+        .gallery-item p { color: #94a3b8; font-size: 0.9rem; line-height: 1.5; }
+
+        /* --- SIDEBAR & MENU --- */
         .menu-icon { position: fixed; top: 45px; left: 20px; z-index: 1000; cursor: pointer; color: #38bdf8; background: #1e293b; padding: 10px 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
         .sidebar { position: fixed; top: 0; left: -250px; width: 250px; height: 100%; background-color: #1e293b; padding: 100px 20px; transition: 0.4s; z-index: 999; }
         .sidebar.active { left: 0; }
-        .sidebar a { display: block; color: #f8fafc; padding: 15px 0; font-size: 1.2rem; cursor: pointer; border-bottom: 1px solid #334155; }
+        .sidebar a { display: block; color: #f8fafc; padding: 15px 0; font-size: 1.2rem; cursor: pointer; border-bottom: 1px solid #334155; text-align: left; }
+        .sidebar a:hover { color: #38bdf8; }
     </style>
 </head>
 <body>
@@ -52,7 +69,7 @@
         <a onclick="showSection('gallery')">Gallery</a>
     </div>
 
-    <!-- HOME -->
+    <!-- 1. HOME SECTION -->
     <section class="page-section active-section" id="home">
         <img src="Firdas.png" class="profile-img animate-item">
         <h1 class="animate-item delay-1">Mohamad Firdaus</h1>
@@ -62,9 +79,9 @@
         <!-- SOSIAL MEDIA -->
         <h3 class="section-title animate-item delay-3">Sosial Media</h3>
         <div class="social-container animate-item delay-3">
-            <a href="https://www.instagram.com/firdaus_jv?igsh=MWlkOHp2NHdodmFvbQ==" class="box"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com/firdsss98" class="box"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/mohamad-firdaus-052b451ba?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="box"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/firdaus_jv?igsh=MWlkOHp2NHdodmFvbQ==" target="_blank" class="box"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/firdsss98" target="_blank" class="box"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/mohamad-firdaus-052b451ba?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="box"><i class="fab fa-linkedin-in"></i></a>
         </div>
 
         <!-- TECH STACK -->
@@ -83,7 +100,67 @@
         </div>
     </section>
 
-    <!-- Script tetap sama -->
+    <!-- 2. CV SECTION (9 PARAGRAF) -->
+    <section class="page-section" id="cv">
+        <div class="cv-text-container">
+            <h2>Curriculum Vitae</h2>
+            
+            <p class="animate-item">P1: Halo! Nama saya Mohamad Firdaus, seorang Digital Creator dan Developer yang berbasis di Indonesia. Saya memiliki ketertarikan yang sangat mendalam pada dunia teknologi modern, pembuatan konten digital, serta pengembangan web interaktif.</p>
+            
+            <p class="animate-item delay-1">P2: Perjalanan karir saya berfokus pada ekosistem digital kreatif, di mana saya aktif menggabungkan keahlian teknis pemrograman dasar dengan pemanfaatan teknologi Artificial Intelligence (AI) terkini untuk menghasilkan produk visual yang inovatif.</p>
+            
+            <p class="animate-item delay-1">P3: Sebagai seorang profesional di bidang digital, saya memegang peran aktif dalam dunia pemasaran digital sebagai Affiliate Marketer di platform Lynk.id, membangun interaksi organik serta mengonversi traffic audiens lewat pendekatan konten kreatif.</p>
+            
+            <p class="animate-item delay-2">P4: Dalam mengelola strategi pemasaran afiliasi, fokus utama saya adalah membangun teknik *storytelling* yang kuat di media sosial, menyajikan solusi naratif yang relevan untuk menjangkau pangsa pasar potensial secara lebih emosional dan terukur.</p>
+            
+            <p class="animate-item delay-2">P5: Selain aspek *marketing*, saya mendedikasikan waktu yang cukup besar sebagai Digital Content Creator independen, mengeksplorasi pembuatan aset visual premium seperti rancangan logo token, media promosi video, hingga grafik sinematik mutakhir.</p>
+            
+            <p class="animate-item delay-2">P6: Keahlian teknis saya mencakup pemahaman arsitektur dasar Web Development dengan mengandalkan integrasi HTML5, CSS3, dan JavaScript guna membangun antarmuka web portofolio yang tidak hanya dinamis namun juga responsif saat diakses dari HP.</p>
+            
+            <p class="animate-item delay-3">P7: Saya percaya bahwa kolaborasi antara keahlian pemrograman web dan implementasi kecerdasan buatan akan menjadi pilar utama dalam industri kreatif di masa depan, memberikan efisiensi tinggi bagi pelaku industri dalam membangun representasi brand digital.</p>
+            
+            <p class="animate-item delay-3">P8: Melalui portofolio digital yang sedang dalam tahap *training* dan pengembangan intensif ini, saya berusaha mendokumentasikan setiap pencapaian proyek, eksperimen kode, serta rekam jejak eksplorasi desain yang telah saya selesaikan.</p>
+            
+            <p class="animate-item delay-3">P9: Saya selalu terbuka untuk mengeksplorasi kesempatan baru, membangun relasi profesional, serta berkolaborasi dalam berbagai proyek berskala kreatif maupun teknis demi menciptakan dampak digital yang lebih luas dan adaptif.</p>
+        </div>
+    </section>
+
+    <!-- 3. GALLERY SECTION (MENAMPILKAN FOTO FIRDAS.PNG) -->
+    <section class="page-section" id="gallery">
+        <h2 class="gallery-title">Gallery Proyek</h2>
+        <div class="gallery-grid">
+            
+            <!-- Proyek 1 -->
+            <div class="gallery-item animate-item">
+                <img src="Firdas.png" alt="Proyek Web Portofolio">
+                <h4>Proyek Web Portofolio Interaktif</h4>
+                <p>Pengembangan desain web portofolio responsif berbasis tema gelap, memanfaatkan teknik animasi transisi CSS murni serta navigasi menu sidebar yang presisi untuk layar HP.</p>
+            </div>
+            
+            <!-- Proyek 2 -->
+            <div class="gallery-item animate-item delay-1">
+                <img src="Firdas.png" alt="Produksi AI Sinematik">
+                <h4>AI Cinematic Production</h4>
+                <p>Eksplorasi dan produksi aset visual sinematik berkualitas tinggi yang memanfaatkan teknologi kecerdasan buatan (AI) untuk kebutuhan konten promosi kreatif.</p>
+            </div>
+
+            <!-- Proyek 3 -->
+            <div class="gallery-item animate-item delay-2">
+                <img src="Firdas.png" alt="Strategi Afiliasi">
+                <h4>Affiliate Content Marketing</h4>
+                <p>Penyusunan rencana kampanye dan pembuatan konten kreatif berbasis storytelling digital untuk mengoptimalkan jangkauan traffic organik pada platform Lynk.id.</p>
+            </div>
+
+            <!-- Proyek 4 -->
+            <div class="gallery-item animate-item delay-3">
+                <img src="Firdas.png" alt="Pengembangan Kode">
+                <h4>Web & Code Experimentation</h4>
+                <p>Kumpulan eksperimen pengembangan front-end menggunakan editor A-Code, berfokus pada optimasi performa skrip animasi serta penerapan layout grid modern.</p>
+            </div>
+
+        </div>
+    </section>
+
     <script>
         function toggleSidebar() { document.getElementById('sidebar').classList.toggle('active'); }
         function showSection(id) {
