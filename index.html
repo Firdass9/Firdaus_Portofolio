@@ -7,8 +7,29 @@
     <!-- Font Awesome 6.5.1 agar Ikon X (Twitter) Muncul Sempurna -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
-        body { background-color: #0f172a; color: #f8fafc; overflow-x: hidden; }
+        /* --- VARIABEL TEMA WARNA --- */
+        :root {
+            --bg-color: #0f172a;
+            --text-color: #f8fafc;
+            --muted-color: #94a3b8;
+            --card-bg: #1e293b;
+            --card-border: #334155;
+            --accent-color: #38bdf8;
+            --marquee-bg: rgba(56, 189, 248, 0.1);
+        }
+
+        [data-theme="light"] {
+            --bg-color: #f8fafc;
+            --text-color: #0f172a;
+            --muted-color: #64748b;
+            --card-bg: #ffffff;
+            --card-border: #cbd5e1;
+            --accent-color: #0284c7;
+            --marquee-bg: rgba(2, 132, 199, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
+        body { background-color: var(--bg-color); color: var(--text-color); overflow-x: hidden; }
 
         /* --- ANIMASI & UI --- */
         @keyframes fadeIn { 
@@ -16,43 +37,63 @@
             to { opacity: 1; transform: translateY(0); } 
         }
         
-        .marquee-top { position: fixed; top: 0; left: 0; width: 100%; background-color: rgba(56, 189, 248, 0.1); color: #38bdf8; padding: 8px 0; font-size: 0.8rem; z-index: 1500; overflow: hidden; border-bottom: 1px solid #38bdf8; }
+        .marquee-top { position: fixed; top: 0; left: 0; width: 100%; background-color: var(--marquee-bg); color: var(--accent-color); padding: 8px 0; font-size: 0.8rem; z-index: 1500; overflow: hidden; border-bottom: 1px solid var(--accent-color); }
         .marquee-content { display: inline-block; white-space: nowrap; padding-left: 100%; animation: marquee 15s linear infinite; }
         @keyframes marquee { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
 
+        /* --- TOMBOL TEMA (DARK/LIGHT MODE) --- */
+        .theme-toggle {
+            position: fixed;
+            top: 45px;
+            right: 20px;
+            z-index: 1600;
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--accent-color);
+            padding: 10px 14px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .theme-toggle:hover {
+            transform: scale(1.05);
+        }
+
         /* --- KOMPONEN GENERAL SECTION (SATU HALAMAN) --- */
-        .page-section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 100px 20px 60px 20px; max-width: 800px; margin: 0 auto; text-align: center; border-bottom: 1px solid #1e293b; position: relative; }
+        .page-section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 100px 20px 60px 20px; max-width: 800px; margin: 0 auto; text-align: center; border-bottom: 1px solid var(--card-border); position: relative; }
         
         /* Kelas Animasi Scroll */
         .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
         /* --- HOME STYLING --- */
-        .profile-img { width: 170px; height: 170px; border-radius: 50%; border: 4px solid #38bdf8; object-fit: cover; margin: 0 auto 20px auto; }
-        .btn-lihat-profil { background-color: #38bdf8; color: #0f172a; padding: 12px 30px; border-radius: 50px; border: none; cursor: pointer; font-weight: bold; margin-bottom: 30px; display: inline-block; text-decoration: none; }
+        .profile-img { width: 170px; height: 170px; border-radius: 50%; border: 4px solid var(--accent-color); object-fit: cover; margin: 0 auto 20px auto; }
+        .btn-lihat-profil { background-color: var(--accent-color); color: var(--bg-color); padding: 12px 30px; border-radius: 50px; border: none; cursor: pointer; font-weight: bold; margin-bottom: 30px; display: inline-block; text-decoration: none; }
+        .btn-lihat-profil:hover { opacity: 0.9; }
 
         /* --- GRID STYLING --- */
-        .section-title { font-size: 0.9rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; margin-top: 10px; }
+        .section-title { font-size: 0.9rem; color: var(--muted-color); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; margin-top: 10px; }
         .social-container, .tech-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 30px; max-width: 400px; margin-left: auto; margin-right: auto; }
         .tech-container { grid-template-columns: repeat(5, 1fr); gap: 10px; }
         
-        .box { background-color: #1e293b; border: 1px solid #334155; padding: 12px; border-radius: 10px; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; color: #f8fafc; transition: 0.3s; text-decoration: none; }
-        .box:hover { color: #38bdf8; border-color: #38bdf8; transform: translateY(-5px); }
+        .box { background-color: var(--card-bg); border: 1px solid var(--card-border); padding: 12px; border-radius: 10px; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; color: var(--text-color); transition: 0.3s; text-decoration: none; }
+        .box:hover { color: var(--accent-color); border-color: var(--accent-color); transform: translateY(-5px); }
 
         /* --- CV STYLING (9 PARAGRAF) --- */
-        .cv-text-container { text-align: left; line-height: 1.8; color: #cbd5e1; width: 100%; }
+        .cv-text-container { text-align: left; line-height: 1.8; color: var(--muted-color); width: 100%; }
         .cv-text-container p { margin-bottom: 1.5rem; text-indent: 20px; }
-        .cv-text-container h2 { color: #38bdf8; margin-bottom: 20px; border-bottom: 2px solid #334155; padding-bottom: 10px; text-align: left; }
+        .cv-text-container h2 { color: var(--accent-color); margin-bottom: 20px; border-bottom: 2px solid var(--card-border); padding-bottom: 10px; text-align: left; }
 
         /* --- GALLERY STYLING --- */
-        .gallery-title { color: #38bdf8; margin-bottom: 20px; border-bottom: 2px solid #334155; padding-bottom: 10px; text-align: left; width: 100%; }
+        .gallery-title { color: var(--accent-color); margin-bottom: 20px; border-bottom: 2px solid var(--card-border); padding-bottom: 10px; text-align: left; width: 100%; }
         .gallery-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 20px; text-align: left; width: 100%; }
         @media (min-width: 600px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
-        .gallery-item { background: #1e293b; padding: 15px; border-radius: 12px; border: 1px solid #334155; transition: 0.3s; }
-        .gallery-item:hover { transform: translateY(-5px); border-color: #38bdf8; }
+        .gallery-item { background: var(--card-bg); padding: 15px; border-radius: 12px; border: 1px solid var(--card-border); transition: 0.3s; }
+        .gallery-item:hover { transform: translateY(-5px); border-color: var(--accent-color); }
         .gallery-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; }
-        .gallery-item h4 { color: #38bdf8; font-size: 1.1rem; margin-bottom: 5px; }
-        .gallery-item p { color: #94a3b8; font-size: 0.9rem; line-height: 1.5; }
+        .gallery-item h4 { color: var(--accent-color); font-size: 1.1rem; margin-bottom: 5px; }
+        .gallery-item p { color: var(--muted-color); font-size: 0.9rem; line-height: 1.5; }
 
         /* --- INDIKATOR SCROLL KE BAWAH --- */
         .scroll-indicator {
@@ -63,7 +104,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: #94a3b8;
+            color: var(--muted-color);
             font-size: 0.75rem;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -72,7 +113,7 @@
         .scroll-indicator i {
             margin-top: 5px;
             font-size: 1rem;
-            color: #38bdf8;
+            color: var(--accent-color);
             animation: bounce 2s infinite;
         }
         @keyframes bounce {
@@ -82,15 +123,20 @@
         }
     </style>
 </head>
-<body>
+<body data-theme="dark">
 
     <div class="marquee-top"><div class="marquee-content">⚠ WEB INI SEDANG DALAM PERKEMBANGAN DAN HANYA TRAINING • WEB INI SEDANG DALAM PERKEMBANGAN DAN HANYA TRAINING •</div></div>
+
+    <!-- Tombol Ganti Tema -->
+    <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()" title="Ganti Mode Terang/Gelap">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
 
     <!-- 1. HOME SECTION -->
     <section class="page-section" id="home">
         <img src="Firdas.png" class="profile-img reveal">
         <h1 class="reveal" style="transition-delay: 0.1s;">Mohamad Firdaus</h1>
-        <p class="reveal" style="color: #94a3b8; margin-bottom: 20px; transition-delay: 0.2s;">Digital Creator & AI Developer</p>
+        <p class="reveal" style="color: var(--muted-color); margin-bottom: 20px; transition-delay: 0.2s;">Digital Creator & AI Developer</p>
         <a href="#cv" class="btn-lihat-profil reveal" style="transition-delay: 0.3s;">Lihat Profil</a>
 
         <!-- SOSIAL MEDIA -->
@@ -185,6 +231,34 @@
     </section>
 
     <script>
+        // Script Toggle Mode Terang & Gelap
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('themeIcon');
+            
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.setAttribute('data-theme', 'light');
+                themeIcon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Cek Preferensi Tema Tersimpan Saat Halaman Dimuat
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.body.setAttribute('data-theme', savedTheme);
+            const themeIcon = document.getElementById('themeIcon');
+            if (savedTheme === 'light') {
+                themeIcon.className = 'fas fa-sun';
+            } else {
+                themeIcon.className = 'fas fa-moon';
+            }
+        });
+
         // Script Animasi Muncul Saat Discroll (Scroll Reveal)
         function revealOnScroll() {
             var reveals = document.querySelectorAll('.reveal');
