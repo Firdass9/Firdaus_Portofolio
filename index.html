@@ -137,7 +137,6 @@
             color: var(--accent-color);
             text-shadow: var(--neon-glow);
             font-size: 0.95rem;
-            text-align: justify;
         }
 
         /* --- GALLERY STYLING --- */
@@ -150,12 +149,8 @@
         .gallery-item h4 { color: var(--accent-color); font-size: 1.1rem; margin-bottom: 5px; }
         .gallery-item p { color: var(--muted-color); font-size: 0.9rem; line-height: 1.5; }
 
-        /* --- INDIKATOR SCROLL KE BAWAH --- */
-        .scroll-indicator {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+        /* --- INDIKATOR SCROLL KE BAWAH (TENGAH HALAMAN) --- */
+        .scroll-indicator-mid {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -164,8 +159,10 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             text-decoration: none;
+            margin: 20px auto 30px auto;
+            width: fit-content;
         }
-        .scroll-indicator i {
+        .scroll-indicator-mid i {
             margin-top: 5px;
             font-size: 1rem;
             color: var(--accent-color);
@@ -196,7 +193,7 @@
     <section class="page-section" id="home">
         <img src="Firdas.png" class="profile-img reveal">
         <h1 class="reveal" style="transition-delay: 0.1s;">Mohamad Firdaus</h1>
-        <p class="reveal" style="color: var(--muted-color); margin-bottom: 20px; transition-delay: 0.2s;">Cyber Security Enthusiast & Full Stack Developer</p>
+        <p class="reveal" style="color: var(--muted-color); margin-bottom: 20px; transition-delay: 0.2s;">Digital Creator & AI Developer</p>
         <a href="#cv" class="btn-lihat-profil reveal" style="transition-delay: 0.3s;">Lihat Profil</a>
 
         <!-- SOSIAL MEDIA -->
@@ -206,6 +203,12 @@
             <a href="https://x.com/firdsss98" target="_blank" class="box"><i class="fab fa-x-twitter"></i></a>
             <a href="https://www.linkedin.com/in/mohamad-firdaus-052b451ba?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="box"><i class="fab fa-linkedin-in"></i></a>
         </div>
+
+        <!-- Indikator Gulir Kebawah di Tengah (Antara Sosmed & Tech Stack) -->
+        <a href="#cv" class="scroll-indicator-mid reveal" style="transition-delay: 0.55s;">
+            <span>Scroll ke Bawah</span>
+            <i class="fas fa-chevron-down"></i>
+        </a>
 
         <!-- TECH STACK -->
         <h3 class="section-title reveal" style="transition-delay: 0.6s;">Tech Stack</h3>
@@ -221,53 +224,47 @@
             <div class="box"><i class="fas fa-terminal"></i></div>
             <div class="box"><i class="fab fa-sass"></i></div>
         </div>
-
-        <!-- Indikator Gulir Kebawah -->
-        <a href="#cv" class="scroll-indicator reveal" style="transition-delay: 0.8s;">
-            <span>Scroll ke Bawah</span>
-            <i class="fas fa-chevron-down"></i>
-        </a>
     </section>
 
-    <!-- 2. CV SECTION (BERBENTUK BOX DENGAN TEKS NEON & PENGALAMAN NYATA) -->
+    <!-- 2. CV SECTION (BERBENTUK BOX DENGAN TEKS NEON) -->
     <section class="page-section" id="cv">
         <div class="cv-text-container">
             <h2 class="reveal">Curriculum Vitae</h2>
             
             <div class="cv-box reveal">
-                <p>P1: Selamat datang di lembar profesional saya. Nama saya Mohamad Firdaus, seorang individu yang menjunjung tinggi etos kerja, ketekunan adaptif, serta komitmen penuh dalam meniti jalur karier profesional di ranah teknologi informasi global.</p>
+                <p>P1: Halo! Nama saya Mohamad Firdaus, seorang Digital Creator dan Developer yang berbasis di Indonesia. Saya memiliki ketertarikan yang sangat mendalam pada dunia teknologi modern, pembuatan konten digital, serta pengembangan web interaktif.</p>
             </div>
             
             <div class="cv-box reveal">
-                <p>P2: Fondasi mental dan kedisiplinan kerja saya terbentuk dari pengalaman nyata di dunia operasional lapangan yang menuntut standar tinggi. Pengalaman bekerja di lingkungan kitchen profesional mengajarkan saya arti penting dari ketelitian tingkat tinggi, manajemen waktu yang ketat, serta koordinasi tim yang solid di bawah tekanan dinamis.</p>
+                <p>P2: Perjalanan karir saya berfokus pada ekosistem digital kreatif, di mana saya aktif menggabungkan keahlian teknis pemrograman dasar dengan pemanfaatan teknologi Artificial Intelligence (AI) terkini untuk menghasilkan produk visual yang inovatif.</p>
             </div>
             
             <div class="cv-box reveal">
-                <p>P3: Selain itu, rekam jejak saya sebagai pengemudi ojek online memperluas kapasitas adaptasi saya terhadap mobilitas perkotaan yang cepat, ketahanan mental menghadapi berbagai situasi di jalan raya, serta efisiensi tinggi dalam pemecahan masalah secara instan.</p>
+                <p>P3: Sebagai seorang profesional di bidang digital, saya memegang peran aktif dalam dunia pemasaran digital sebagai Affiliate Marketer di platform Lynk.id, membangun interaksi organik serta mengonversi traffic audiens lewat pendekatan konten kreatif.</p>
             </div>
             
             <div class="cv-box reveal">
-                <p>P4: Pengalaman sebagai kurir paket juga turut mengasah rasa tanggung jawab mendalam terhadap akurasi data pengiriman logistik, ketepatan waktu, serta konsistensi performa kerja dalam melayani kebutuhan masyarakat secara langsung setiap harinya.</p>
+                <p>P4: Dalam mengelola strategi pemasaran afiliasi, fokus utama saya adalah membangun teknik <em>storytelling</em> yang kuat di media sosial, menyajikan solusi naratif yang relevan untuk menjangkau pangsa pasar potensial secara lebih emosional dan terukur.</p>
             </div>
             
             <div class="cv-box reveal">
-                <p>P5: Berbekal ketangguhan mental dari pengalaman operasional tersebut, saya melakukan transisi strategis yang terarah untuk mendedikasikan diri sepenuhnya pada bidang teknologi informasi, khususnya dalam penguasaan ranah Cyber Security dan Full Stack Developer.</p>
+                <p>P5: Selain aspek <em>marketing</em>, saya mendedikasikan waktu yang cukup besar sebagai Digital Content Creator independen, mengeksplorasi pembuatan aset visual premium seperti rancangan logo token, media promosi video, hingga grafik sinematik mutakhir.</p>
             </div>
             
             <div class="cv-box reveal">
-                <p>P6: Sebagai pembelajar aktif di bidang Full Stack Developer, saya mendalami perancangan struktur arsitektur web modern, pembangunan antarmuka pengguna yang interaktif, hingga pengelolaan sistem bahasa pemrograman sisi server yang andal dan terintegrasi.</p>
+                <p>P6: Keahlian teknis saya mencakup pemahaman arsitektur dasar Web Development dengan mengandalkan integrasi HTML5, CSS3, dan JavaScript guna membangun antarmuka web portofolio yang tidak hanya dinamis namun juga responsif saat diakses dari HP.</p>
             </div>
             
             <div class="cv-box reveal">
-                <p>P7: Di sisi lain, fokus saya pada bidang Cyber Security didorong oleh kebutuhan mendesak industri modern akan keamanan siber. Saya aktif mempelajari teknik analisis kerentanan sistem, pencegahan ancaman digital, serta penerapan protokol pertahanan data yang ketat.</p>
+                <p>P7: Saya percaya bahwa kolaborasi antara keahlian pemrograman web dan implementasi kecerdasan buatan akan menjadi pilar utama dalam industri kreatif di masa depan, memberikan efisiensi tinggi bagi pelaku industri dalam membangun representasi brand digital.</p>
             </div>
             
             <div class="cv-box reveal">
-                <p>P8: Kombinasi antara kedisiplinan lapangan yang telah mendarah daging dan ketertarikan mendalam pada dunia pemrograman memungkinkan saya untuk memandang pengembangan teknologi dari sudut pandang yang analitis, solutif, serta berorientasi pada keamanan.</p>
+                <p>P8: Melalui portofolio digital yang sedang dalam tahap <em>training</em> dan pengembangan intensif ini, saya berusaha mendokumentasikan setiap pencapaian proyek, eksperimen kode, serta rekam jejak eksplorasi desain yang telah saya selesaikan.</p>
             </div>
             
             <div class="cv-box reveal">
-                <p>P9: Saya siap menyambut peluang kolaborasi dan tantangan profesional baru di industri teknologi, membawa serta semangat pantang menyerah serta dedikasi penuh untuk menghadirkan dampak digital yang aman, inovatif, dan berkelanjutan.</p>
+                <p>P9: Saya selalu terbuka untuk mengeksplorasi kesempatan baru, membangun relasi profesional, serta berkolaborasi dalam berbagai proyek berskala kreatif maupun teknis demi menciptakan dampak digital yang lebih luas dan adaptif.</p>
             </div>
         </div>
     </section>
@@ -365,4 +362,3 @@
     </script>
 </body>
 </html>
-
