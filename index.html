@@ -1,3 +1,6 @@
+Error yang Anda lihat di tangkapan layar sebelumnya terjadi karena aplikasi atau editor GitHub mendeteksi ketidakcocokan jalur repositori (Firdass9/Firdaus_Portofolio), sementara Anda mungkin telah mengganti nama repositori Anda menjadi nama lain seperti firjava atau Firjavaupdate.
+Berikut adalah kode lengkap terbaru yang sudah berisi animasi teks sambutan "Hai salam kenal 👋🏻", CV berbentuk box dengan teks neon, serta narasi latar belakang pengalaman Anda (Kitchen, Ojek Online, Kurir Paket) yang mengarah ke Cyber Security & Full Stack Developer.
+Salin seluruh kode di bawah ini, lalu perbarui file index.html di repositori GitHub Anda yang aktif (pastikan Anda membuka repositori yang benar, misalnya firjava atau Firjavaupdate):
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -16,22 +19,58 @@
             --card-border: #334155;
             --accent-color: #38bdf8;
             --marquee-bg: rgba(56, 189, 248, 0.1);
+            --neon-glow: 0 0 10px rgba(56, 189, 248, 0.6), 0 0 20px rgba(56, 189, 248, 0.3);
         }
 
         [data-theme="light"] {
             --bg-color: #f8fafc;
             --text-color: #0f172a;
-            --muted-color: #64748b;
+            --muted-color: #334155;
             --card-bg: #ffffff;
             --card-border: #cbd5e1;
             --accent-color: #0284c7;
             --marquee-bg: rgba(2, 132, 199, 0.1);
+            --neon-glow: 0 0 10px rgba(2, 132, 199, 0.5), 0 0 20px rgba(2, 132, 199, 0.2);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
         body { background-color: var(--bg-color); color: var(--text-color); overflow-x: hidden; }
 
-        /* --- ANIMASI & UI --- */
+        /* --- INTRO / SPLASH SCREEN ANIMASI --- */
+        #intro-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+        .intro-text {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-shadow: var(--neon-glow);
+            border-right: 3px solid var(--accent-color);
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 2.5s steps(22, end) forwards, blink 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: var(--accent-color); }
+        }
+
+        /* --- ANIMASI & UI UTAMA --- */
         @keyframes fadeIn { 
             from { opacity: 0; transform: translateY(30px); } 
             to { opacity: 1; transform: translateY(0); } 
@@ -80,10 +119,29 @@
         .box { background-color: var(--card-bg); border: 1px solid var(--card-border); padding: 12px; border-radius: 10px; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; color: var(--text-color); transition: 0.3s; text-decoration: none; }
         .box:hover { color: var(--accent-color); border-color: var(--accent-color); transform: translateY(-5px); }
 
-        /* --- CV STYLING (9 PARAGRAF) --- */
-        .cv-text-container { text-align: left; line-height: 1.8; color: var(--muted-color); width: 100%; }
-        .cv-text-container p { margin-bottom: 1.5rem; text-indent: 20px; }
-        .cv-text-container h2 { color: var(--accent-color); margin-bottom: 20px; border-bottom: 2px solid var(--card-border); padding-bottom: 10px; text-align: left; }
+        /* --- CV STYLING (BOX PARAGRAF DENGAN TEKS NEON) --- */
+        .cv-text-container { text-align: left; line-height: 1.7; width: 100%; }
+        .cv-text-container h2 { color: var(--accent-color); margin-bottom: 25px; border-bottom: 2px solid var(--card-border); padding-bottom: 10px; text-align: left; text-shadow: var(--neon-glow); }
+        
+        .cv-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+        .cv-box:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: var(--neon-glow);
+        }
+        .cv-box p {
+            color: var(--accent-color);
+            text-shadow: var(--neon-glow);
+            font-size: 0.95rem;
+            text-align: justify;
+        }
 
         /* --- GALLERY STYLING --- */
         .gallery-title { color: var(--accent-color); margin-bottom: 20px; border-bottom: 2px solid var(--card-border); padding-bottom: 10px; text-align: left; width: 100%; }
@@ -125,6 +183,11 @@
 </head>
 <body data-theme="dark">
 
+    <!-- LAYAR PEMBUKA (INTRO SCREEN) -->
+    <div id="intro-screen">
+        <div class="intro-text">Hai salam kenal 👋🏻</div>
+    </div>
+
     <div class="marquee-top"><div class="marquee-content">⚠ WEB INI SEDANG DALAM PERKEMBANGAN DAN HANYA TRAINING • WEB INI SEDANG DALAM PERKEMBANGAN DAN HANYA TRAINING •</div></div>
 
     <!-- Tombol Ganti Tema -->
@@ -136,7 +199,7 @@
     <section class="page-section" id="home">
         <img src="Firdas.png" class="profile-img reveal">
         <h1 class="reveal" style="transition-delay: 0.1s;">Mohamad Firdaus</h1>
-        <p class="reveal" style="color: var(--muted-color); margin-bottom: 20px; transition-delay: 0.2s;">Digital Creator & AI Developer</p>
+        <p class="reveal" style="color: var(--muted-color); margin-bottom: 20px; transition-delay: 0.2s;">Cyber Security Enthusiast & Full Stack Developer</p>
         <a href="#cv" class="btn-lihat-profil reveal" style="transition-delay: 0.3s;">Lihat Profil</a>
 
         <!-- SOSIAL MEDIA -->
@@ -169,28 +232,46 @@
         </a>
     </section>
 
-    <!-- 2. CV SECTION (9 PARAGRAF) -->
+    <!-- 2. CV SECTION (BERBENTUK BOX DENGAN TEKS NEON & PENGALAMAN NYATA) -->
     <section class="page-section" id="cv">
         <div class="cv-text-container">
             <h2 class="reveal">Curriculum Vitae</h2>
             
-            <p class="reveal">P1: Halo! Nama saya Mohamad Firdaus, seorang Digital Creator dan Developer yang berbasis di Indonesia. Saya memiliki ketertarikan yang sangat mendalam pada dunia teknologi modern, pembuatan konten digital, serta pengembangan web interaktif.</p>
+            <div class="cv-box reveal">
+                <p>P1: Selamat datang di lembar profesional saya. Nama saya Mohamad Firdaus, seorang individu yang menjunjung tinggi etos kerja, ketekunan adaptif, serta komitmen penuh dalam meniti jalur karier profesional di ranah teknologi informasi global.</p>
+            </div>
             
-            <p class="reveal">P2: Perjalanan karir saya berfokus pada ekosistem digital kreatif, di mana saya aktif menggabungkan keahlian teknis pemrograman dasar dengan pemanfaatan teknologi Artificial Intelligence (AI) terkini untuk menghasilkan produk visual yang inovatif.</p>
+            <div class="cv-box reveal">
+                <p>P2: Fondasi mental dan kedisiplinan kerja saya terbentuk dari pengalaman nyata di dunia operasional lapangan yang menuntut standar tinggi. Pengalaman bekerja di lingkungan kitchen profesional mengajarkan saya arti penting dari ketelitian tingkat tinggi, manajemen waktu yang ketat, serta koordinasi tim yang solid di bawah tekanan dinamis.</p>
+            </div>
             
-            <p class="reveal">P3: Sebagai seorang profesional di bidang digital, saya memegang peran aktif dalam dunia pemasaran digital sebagai Affiliate Marketer di platform Lynk.id, membangun interaksi organik serta mengonversi traffic audiens lewat pendekatan konten kreatif.</p>
+            <div class="cv-box reveal">
+                <p>P3: Selain itu, rekam jejak saya sebagai pengemudi ojek online memperluas kapasitas adaptasi saya terhadap mobilitas perkotaan yang cepat, ketahanan mental menghadapi berbagai situasi di jalan raya, serta efisiensi tinggi dalam pemecahan masalah secara instan.</p>
+            </div>
             
-            <p class="reveal">P4: Dalam mengelola strategi pemasaran afiliasi, fokus utama saya adalah membangun teknik <em>storytelling</em> yang kuat di media sosial, menyajikan solusi naratif yang relevan untuk menjangkau pangsa pasar potensial secara lebih emosional dan terukur.</p>
+            <div class="cv-box reveal">
+                <p>P4: Pengalaman sebagai kurir paket juga turut mengasah rasa tanggung jawab mendalam terhadap akurasi data pengiriman logistik, ketepatan waktu, serta konsistensi performa kerja dalam melayani kebutuhan masyarakat secara langsung setiap harinya.</p>
+            </div>
             
-            <p class="reveal">P5: Selain aspek <em>marketing</em>, saya mendedikasikan waktu yang cukup besar sebagai Digital Content Creator independen, mengeksplorasi pembuatan aset visual premium seperti rancangan logo token, media promosi video, hingga grafik sinematik mutakhir.</p>
+            <div class="cv-box reveal">
+                <p>P5: Berbekal ketangguhan mental dari pengalaman operasional tersebut, saya melakukan transisi strategis yang terarah untuk mendedikasikan diri sepenuhnya pada bidang teknologi informasi, khususnya dalam penguasaan ranah Cyber Security dan Full Stack Developer.</p>
+            </div>
             
-            <p class="reveal">P6: Keahlian teknis saya mencakup pemahaman arsitektur dasar Web Development dengan mengandalkan integrasi HTML5, CSS3, dan JavaScript guna membangun antarmuka web portofolio yang tidak hanya dinamis namun juga responsif saat diakses dari HP.</p>
+            <div class="cv-box reveal">
+                <p>P6: Sebagai pembelajar aktif di bidang Full Stack Developer, saya mendalami perancangan struktur arsitektur web modern, pembangunan antarmuka pengguna yang interaktif, hingga pengelolaan sistem bahasa pemrograman sisi server yang andal dan terintegrasi.</p>
+            </div>
             
-            <p class="reveal">P7: Saya percaya bahwa kolaborasi antara keahlian pemrograman web dan implementasi kecerdasan buatan akan menjadi pilar utama dalam industri kreatif di masa depan, memberikan efisiensi tinggi bagi pelaku industri dalam membangun representasi brand digital.</p>
+            <div class="cv-box reveal">
+                <p>P7: Di sisi lain, fokus saya pada bidang Cyber Security didorong oleh kebutuhan mendesak industri modern akan keamanan siber. Saya aktif mempelajari teknik analisis kerentanan sistem, pencegahan ancaman digital, serta penerapan protokol pertahanan data yang ketat.</p>
+            </div>
             
-            <p class="reveal">P8: Melalui portofolio digital yang sedang dalam tahap <em>training</em> dan pengembangan intensif ini, saya berusaha mendokumentasikan setiap pencapaian proyek, eksperimen kode, serta rekam jejak eksplorasi desain yang telah saya selesaikan.</p>
+            <div class="cv-box reveal">
+                <p>P8: Kombinasi antara kedisiplinan lapangan yang telah mendarah daging dan ketertarikan mendalam pada dunia pemrograman memungkinkan saya untuk memandang pengembangan teknologi dari sudut pandang yang analitis, solutif, serta berorientasi pada keamanan.</p>
+            </div>
             
-            <p class="reveal">P9: Saya selalu terbuka untuk mengeksplorasi kesempatan baru, membangun relasi profesional, serta berkolaborasi dalam berbagai proyek berskala kreatif maupun teknis demi menciptakan dampak digital yang lebih luas dan adaptif.</p>
+            <div class="cv-box reveal">
+                <p>P9: Saya siap menyambut peluang kolaborasi dan tantangan profesional baru di industri teknologi, membawa serta semangat pantang menyerah serta dedikasi penuh untuk menghadirkan dampak digital yang aman, inovatif, dan berkelanjutan.</p>
+            </div>
         </div>
     </section>
 
@@ -231,6 +312,15 @@
     </section>
 
     <script>
+        // Script Hilangkan Intro Screen Setelah Beberapa Detik
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const intro = document.getElementById('intro-screen');
+                intro.style.opacity = '0';
+                intro.style.visibility = 'hidden';
+            }, 3000); // Intro muncul selama 3 detik sebelum menghilang halus
+        });
+
         // Script Toggle Mode Terang & Gelap
         function toggleTheme() {
             const body = document.body;
